@@ -1,7 +1,11 @@
 .cover {
   //   background-image: url("../assets/images/cover/attack-on-titan.jpg");
   //   background-image: url("../assets/images/cover/freedom-flight.jpg");
-  background-image: url("../assets/images/cover/tokyo-ghoul.png");
+  background: linear-gradient(
+      rgba(11, 198, 227, 0.75),
+      rgba(208, 168, 92, 0.75)
+    ),
+    url("../assets/images/cover/tokyo-ghoul.png");
   //   background-image: url("../assets/images/cover/your-name-1.png");
   //   background-image: url("../assets/images/cover/your-name-4.png");
   //   background-image: url("../assets/images/cover/your-name-5.png");
