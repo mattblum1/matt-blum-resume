@@ -1,0 +1,25 @@
+.cover {
+  //   background-image: url("../assets/images/cover/attack-on-titan.jpg");
+  //   background-image: url("../assets/images/cover/freedom-flight.jpg");
+  background-image: url("../assets/images/cover/tokyo-ghoul.png");
+  //   background-image: url("../assets/images/cover/your-name-1.png");
+  //   background-image: url("../assets/images/cover/your-name-4.png");
+  //   background-image: url("../assets/images/cover/your-name-5.png");
+  //   background-image: url("../assets/images/cover/your-name-6.png");
+  //   background-image: url("../assets/images/cover/your-name-8.png");
+
+  align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: center;
+}
+
+.content {
+  //   background-color: var(--primary);
+  height: 40vh;
+}
