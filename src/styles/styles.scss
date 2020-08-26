@@ -1,0 +1,15 @@
+@import "~@angular/material/theming";
+
+@import "./base/colors";
+@import "./themes/resume-mat-theme";
+@import "~bootstrap/dist/css/bootstrap-grid.min";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

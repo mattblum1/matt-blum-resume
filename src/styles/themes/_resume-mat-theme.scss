@@ -1,0 +1,19 @@
+@import "../palettes/resume-mat-palette";
+
+@include mat-core();
+
+$resume-primary: mat-palette($mat-resume-primary);
+$resume-accent: mat-palette($mat-resume-secondary);
+$resume-warn: mat-palette($mat-red);
+
+$resume-theme: mat-light-theme(
+  (
+    color: (
+      primary: $resume-primary,
+      accent: $resume-accent,
+      warn: $resume-warn,
+    ),
+  )
+);
+
+@include angular-material-theme($resume-theme);
