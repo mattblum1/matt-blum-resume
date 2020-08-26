@@ -13,13 +13,45 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   height: 80vh;
   justify-content: center;
+
+  mat-card {
+    background: var(--primary);
+    color: var(--white);
+    opacity: 0.75;
+    padding: 40px;
+  }
+
+  .container {
+    padding: 40px 340px;
+    text-align: center;
+  }
+
+  .title {
+    border-bottom: 1px solid #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.35);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    h1 {
+      font-size: 63px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+  }
+
+  .description {
+    h3 {
+      font-size: 28px;
+      font-weight: 200;
+    }
+  }
 }
 
 .content {
-  //   background-color: var(--primary);
-  height: 40vh;
+  height: 100vh;
 }
