@@ -90,6 +90,10 @@ $cover-height: 100vh;
   }
 }
 
+.animate__delay-05s {
+  animation-delay: 0.5s;
+}
+
 @-webkit-keyframes action {
   0% {
     transform: translateY(0);
