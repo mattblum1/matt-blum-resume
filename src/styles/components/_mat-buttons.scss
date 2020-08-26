@@ -1,0 +1,7 @@
+button,
+a {
+  &.mat-raised-button {
+    border-radius: 0;
+    text-transform: uppercase;
+  }
+}

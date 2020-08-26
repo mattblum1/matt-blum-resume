@@ -1,11 +1,14 @@
 @import "~@angular/material/theming";
+@import "~bootstrap/dist/css/bootstrap-grid.min";
 
 @import "./base/colors";
+@import "./components/mat-buttons";
+@import "./components/mat-cards";
 @import "./themes/resume-mat-theme";
-@import "~bootstrap/dist/css/bootstrap-grid.min";
 
 html,
 body {
+  // background-color: var(--primary);
   height: 100%;
 }
 
