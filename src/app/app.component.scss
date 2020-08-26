@@ -1,3 +1,4 @@
+$cover-height: 100vh;
 .cover {
   //   background-image: url("../assets/images/cover/attack-on-titan.jpg");
   //   background-image: url("../assets/images/cover/freedom-flight.jpg");
@@ -20,7 +21,7 @@
   color: var(--white);
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: $cover-height;
   justify-content: center;
 
   mat-card {
@@ -58,4 +59,21 @@
 
 .content {
   height: 100vh;
+}
+
+.down {
+  background-color: var(--black);
+  bottom: 0;
+  position: absolute;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 80px;
+
+  mat-icon {
+    font-size: 30px;
+    transform: rotate(90deg);
+  }
 }
