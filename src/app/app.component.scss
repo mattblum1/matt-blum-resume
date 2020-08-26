@@ -65,18 +65,21 @@ $cover-height: 100vh;
   background-color: var(--black);
   bottom: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   right: 5%;
   width: 110px;
   height: 80px;
 
   .down {
-    position: relative;
-    top: -10px;
-    transform: rotate(90deg);
+    align-items: baseline;
+    display: flex;
   }
 
   mat-icon {
     font-size: 63px;
+    width: 63px;
   }
 }
