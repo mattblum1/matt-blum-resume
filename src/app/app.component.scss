@@ -61,19 +61,22 @@ $cover-height: 100vh;
   height: 100vh;
 }
 
-.down {
+.down-wrapper {
   background-color: var(--black);
   bottom: 0;
+  cursor: pointer;
   position: absolute;
   right: 5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 110px;
   height: 80px;
 
-  mat-icon {
-    font-size: 30px;
+  .down {
+    position: relative;
+    top: -10px;
     transform: rotate(90deg);
+  }
+
+  mat-icon {
+    font-size: 63px;
   }
 }
