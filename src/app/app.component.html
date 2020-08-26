@@ -10,6 +10,7 @@
     </div>
     <div
       class="down-wrapper animate__animated animate__fadeInUp animate__delay-1s"
+      (click)="scrollToId('content')"
     >
       <div class="down">
         <mat-icon aria-hidden="false" aria-label="Down Arrow"
@@ -21,7 +22,7 @@
   </div>
 </section>
 
-<section class="content">
+<section class="content" id="content">
   <div class="container">
     <div class="row">
       <div class="col-9">
