@@ -42,7 +42,29 @@
   <div class="container">
     <h2 class="label">Skills</h2>
     <hr />
-    <p>Content</p>
+    <div class="content">
+      <div class="row">
+        <div class="col-6" *ngFor="let skill of skills; let i = index">
+          <div class="row">
+            <div class="col-md">
+              {{ skill.label }}
+            </div>
+            <div class="col-md">
+              <mat-icon
+                class="star"
+                *ngFor="let item of [].constructor(skill.rating)"
+                >star</mat-icon
+              >
+              <mat-icon
+                class="star-empty"
+                *ngFor="let item of [].constructor(5 - skill.rating)"
+                >star</mat-icon
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -50,7 +72,7 @@
   <div class="container">
     <h2 class="label">Experience</h2>
     <hr />
-    <p>Content</p>
+    <div class="content">Content</div>
   </div>
 </section>
 
@@ -58,7 +80,7 @@
   <div class="container">
     <h2 class="label">Education</h2>
     <hr />
-    <p>Content</p>
+    <div class="content">Content</div>
   </div>
 </section>
 
@@ -66,6 +88,6 @@
   <div class="container">
     <h2 class="label">Projects</h2>
     <hr />
-    <p>Content</p>
+    <div class="content">Content</div>
   </div>
 </section>

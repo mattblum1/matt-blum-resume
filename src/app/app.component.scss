@@ -100,8 +100,16 @@ section {
     padding: 15px;
   }
 
-  p {
+  .content {
     padding: 15px;
+
+    .star {
+      color: var(--secondary);
+    }
+
+    .star-empty {
+      color: var(--gray);
+    }
   }
 }
 
