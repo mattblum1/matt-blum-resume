@@ -1,4 +1,5 @@
 $cover-height: 100vh;
+
 .cover {
   // background-image: url("../assets/images/cover/attack-on-titan.jpg");
   //   background-image: url("../assets/images/cover/freedom-flight.jpg");
@@ -45,63 +46,72 @@ $cover-height: 100vh;
     border-bottom-color: rgba(255, 255, 255, 0.35);
     margin-bottom: 20px;
     padding-bottom: 20px;
-
-    h1 {
-      font-size: 63px;
-      font-weight: 500;
-      white-space: nowrap;
-    }
-  }
-
-  .description {
-    h3 {
-      font-size: 28px;
-      font-weight: 200;
-
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-    }
   }
 
   .cta {
     a.mat-raised-button {
       mat-icon.mat-icon {
         margin-right: 4px;
+        position: relative;
+        top: -1px;
       }
     }
   }
 }
 
-aside {
-  margin-right: 15px;
-  width: 110px;
+// aside {
+//   margin: 0;
+//   margin-right: 15px;
+//   padding: 0;
+//   width: 110px;
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+//   ul {
+//     margin: 0;
+//     padding: 0;
 
-    li {
-      align-items: center;
-      background-color: var(--black);
-      color: var(--white);
-      display: flex;
-      height: 80px;
-      justify-content: center;
-      border-bottom: 1px solid var(--white);
+//     li {
+//       align-items: center;
+//       background-color: var(--black);
+//       border-bottom: 1px solid var(--white);
+//       color: var(--white);
+//       display: flex;
+//       height: 80px;
+//       justify-content: center;
+//       width: 100%;
 
-      &.active {
-        background-color: var(--primary);
-      }
-    }
+//       &.active {
+//         background-color: var(--primary);
+//       }
+
+//       a {
+//         color: var(--white);
+//         text-decoration: none;
+
+//         &.active {
+//           color: var(--primary);
+//         }
+//       }
+//     }
+//   }
+// }
+
+section {
+  height: 500px;
+
+  &:nth-child(odd) {
+    background-color: var(--off-white);
   }
-}
 
-.content {
-  section mat-card {
-    height: 20vh;
+  .label {
+    align-items: center;
+    display: flex;
+    color: var(--primary);
+    justify-content: center;
+    padding: 15px;
+  }
+
+  p {
+    padding: 15px;
   }
 }
 
