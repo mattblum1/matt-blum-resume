@@ -13,16 +13,19 @@
     <!-- .description -->
 
     <div class="cta">
-      <button mat-raised-button color="accent">
-        <mat-icon>linkedin</mat-icon>LinkedIn
-      </button>
-      <button mat-raised-button color="primary">
+      <a
+        href="mailto:matt.blum@live.com"
+        mat-raised-button
+        color="accent"
+        class="animate__animated animate__fadeInRight animate__delay-1s"
+      >
         <mat-icon>email</mat-icon>Contact Me
-      </button>
+      </a>
     </div>
+    <!-- .cta -->
 
     <div
-      class="down-wrapper animate__animated animate__fadeInUp animate__delay-1s"
+      class="down-wrapper animate__animated animate__fadeInUp animate__delay-15s"
       (click)="scrollToId('content')"
     >
       <div class="down">
@@ -36,17 +39,42 @@
 </section>
 
 <section class="content" id="content">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-9">
-        <mat-card class="mat-elevation-z4">
-          <button mat-raised-button color="primary">Primary</button>
-          <button mat-raised-button color="accent">Accent</button>
-        </mat-card>
+      <div class="col">
+        <section id="skills">
+          <mat-card class="mat-elevation-z4">
+            <h2>Skills</h2>
+          </mat-card>
+        </section>
+
+        <section id="experience">
+          <mat-card class="mat-elevation-z4">
+            <h2>Experience</h2>
+          </mat-card>
+        </section>
+
+        <section id="education">
+          <mat-card class="mat-elevation-z4">
+            <h2>Education</h2>
+          </mat-card>
+        </section>
+
+        <section id="projects">
+          <mat-card class="mat-elevation-z4">
+            <h2>Projects</h2>
+          </mat-card>
+        </section>
       </div>
-      <div class="col-3">
-        <mat-card class="mat-elevation-z4"> </mat-card>
-      </div>
+
+      <aside>
+        <ul>
+          <li (click)="scrollToId('skills')">Skills</li>
+          <li (click)="scrollToId('experience')" class="active">Experience</li>
+          <li (click)="scrollToId('education')">Education</li>
+          <li (click)="scrollToId('projects')">Projects</li>
+        </ul>
+      </aside>
     </div>
   </div>
 </section>
