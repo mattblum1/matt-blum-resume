@@ -8,10 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'matt-blum-resume';
 
-  scrollToId(selector: string, yOffset = -20) {
+  scrollToId(selector: string) {
     const el = document.getElementById(selector);
-    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    el.scrollIntoView({ behavior: 'smooth' });
   }
+
+  // scrollToId(selector: string, yOffset = -20) {
+  //   const el = document.getElementById(selector);
+  //   const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+  //   window.scrollTo({ top: y, behavior: 'smooth' });
+  // }
 }
