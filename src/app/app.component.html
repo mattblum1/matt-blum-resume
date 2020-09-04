@@ -61,86 +61,114 @@
   </section>
   <!-- #header -->
 
-  <mat-card id="profile">
-    <div class="header">
-      <h2 class="title">Profile</h2>
-      <div class="title-blurb">About me</div>
-      <div class="clear-fix"></div>
-    </div>
-    <!-- .header -->
-    <div class="content">Content</div>
-    <!-- .content -->
-  </mat-card>
+  <section id="profile" wmAnimate="fadeInDown" aos>
+    <mat-card>
+      <div class="header">
+        <h2 class="title" wmAnimate="fadeInUp" aos>Profile</h2>
+        <div class="title-blurb" wmAnimate="fadeInDown" aos delay="250ms">
+          About me
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+      <!-- .header -->
+      <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
+        Content
+      </div>
+      <!-- .content -->
+    </mat-card>
+  </section>
   <!-- #education -->
 
-  <mat-card id="skills">
-    <div class="header">
-      <h2 class="title">Skills</h2>
-      <div class="title-blurb">Skills blurb</div>
-      <div class="clear-fix"></div>
-    </div>
-    <!-- .header -->
-    <div class="content">
-      <div class="row">
-        <div class="col-6" *ngFor="let skill of skills; let i = index">
-          <div class="row">
-            <div class="col-md">
-              {{ skill.label }}
-            </div>
-            <div class="col-md">
-              <mat-icon
-                class="star"
-                *ngFor="let item of [].constructor(skill.rating)"
-                >star</mat-icon
-              >
-              <mat-icon
-                class="star-empty"
-                *ngFor="let item of [].constructor(5 - skill.rating)"
-                >star</mat-icon
-              >
+  <section id="skills" wmAnimate="fadeInDown" aos>
+    <mat-card>
+      <div class="header">
+        <h2 class="title" wmAnimate="fadeInUp" aos>Skills</h2>
+        <div class="title-blurb" wmAnimate="fadeInDown" aos delay="250ms">
+          Skills blurb
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+      <!-- .header -->
+      <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
+        <div class="row">
+          <div class="col-6" *ngFor="let skill of skills; let i = index">
+            <div class="row">
+              <div class="col-md">
+                {{ skill.label }}
+              </div>
+              <div class="col-md">
+                <mat-icon
+                  class="star"
+                  *ngFor="let item of [].constructor(skill.rating)"
+                  >star</mat-icon
+                >
+                <mat-icon
+                  class="star-empty"
+                  *ngFor="let item of [].constructor(5 - skill.rating)"
+                  >star</mat-icon
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- .content -->
-  </mat-card>
+      <!-- .content -->
+    </mat-card>
+  </section>
   <!-- #skill-set -->
 
-  <mat-card id="projects">
-    <div class="header">
-      <h2 class="title">Projects</h2>
-      <div class="title-blurb">Projects blurb</div>
-      <div class="clear-fix"></div>
-    </div>
-    <!-- .header -->
-    <div class="content">Content</div>
-    <!-- .content -->
-  </mat-card>
+  <section id="projects" wmAnimate="fadeInDown" aos>
+    <mat-card>
+      <div class="header">
+        <h2 class="title" class="title" wmAnimate="fadeInUp" aos>Projects</h2>
+        <div class="title-blurb" wmAnimate="fadeInDown" aos delay="250ms">
+          Projects blurb
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+      <!-- .header -->
+      <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
+        Content
+      </div>
+      <!-- .content -->
+    </mat-card>
+  </section>
   <!-- #projects -->
 
-  <mat-card id="experience">
-    <div class="header">
-      <h2 class="title">Experience</h2>
-      <div class="title-blurb">Experience blurb</div>
-      <div class="clear-fix"></div>
-    </div>
-    <!-- .header -->
-    <div class="content">Content</div>
-    <!-- .content -->
-  </mat-card>
+  <section id="experience" wmAnimate="fadeInDown" aos>
+    <mat-card>
+      <div class="header">
+        <h2 class="title" wmAnimate="fadeInUp" aos>Experience</h2>
+        <div class="title-blurb" wmAnimate="fadeInDown" aos delay="250ms">
+          Experience blurb
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+      <!-- .header -->
+      <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
+        Content
+      </div>
+      <!-- .content -->
+    </mat-card>
+  </section>
   <!-- #experience -->
 
-  <mat-card id="education">
-    <div class="header">
-      <h2 class="title">Education</h2>
-      <div class="title-blurb">Education blurb</div>
-      <div class="clear-fix"></div>
-    </div>
-    <!-- .header -->
-    <div class="content">Content</div>
-    <!-- .content -->
-  </mat-card>
+  <section id="education" wmAnimate="fadeInDown" aos>
+    <mat-card id="education">
+      <div class="header">
+        <h2 class="title" class="title" wmAnimate="fadeInUp" aos>Education</h2>
+        <div class="title-blurb" wmAnimate="fadeInDown" aos delay="250ms">
+          Education blurb
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+      <!-- .header -->
+      <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
+        Content
+      </div>
+      <!-- .content -->
+    </mat-card>
+  </section>
   <!-- #education -->
 </div>
 <!-- .container -->
