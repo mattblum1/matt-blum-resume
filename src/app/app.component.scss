@@ -68,69 +68,74 @@ $cover-height: 100vh;
       }
     }
   }
+
+  .down-wrapper {
+    align-items: center;
+    background-color: var(--primary);
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    width: 110px;
+
+    .down {
+      align-items: baseline;
+      display: flex;
+    }
+
+    mat-icon {
+      font-size: 63px;
+      width: 63px;
+
+      position: relative;
+      top: 5px;
+
+      -webkit-animation: action 1s infinite alternate;
+      animation: action 1s infinite alternate;
+    }
+  }
 }
 
-// aside {
-//   margin: 0;
-//   margin-right: 15px;
-//   padding: 0;
-//   width: 110px;
-
-//   ul {
-//     margin: 0;
-//     padding: 0;
-
-//     li {
-//       align-items: center;
-//       background-color: var(--black);
-//       border-bottom: 1px solid var(--white);
-//       color: var(--white);
-//       display: flex;
-//       height: 80px;
-//       justify-content: center;
-//       width: 100%;
-
-//       &.active {
-//         background-color: var(--primary);
-//       }
-
-//       a {
-//         color: var(--white);
-//         text-decoration: none;
-
-//         &.active {
-//           color: var(--primary);
-//         }
-//       }
-//     }
-//   }
-// }
-
-.down-wrapper {
-  background-color: var(--primary);
-  bottom: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+nav {
+  margin: 0;
+  padding: 0;
+  width: 110px;
   position: absolute;
+  top: 100%;
   right: 5%;
-  width: 80px;
-  height: 60px;
 
-  .down {
-    align-items: baseline;
-    display: flex;
-  }
+  ul {
+    margin: 0;
+    padding: 0;
 
-  mat-icon {
-    font-size: 63px;
-    width: 63px;
+    li {
+      align-items: center;
+      background-color: var(--primary);
+      // border-bottom: 1px solid var(--white);
+      color: var(--white);
+      cursor: pointer;
+      display: flex;
+      height: 80px;
+      justify-content: center;
+      text-transform: uppercase;
+      width: 100%;
 
-    position: relative;
-    top: 5px;
+      &.active {
+        background-color: var(--secondary);
+        color: var(--black);
+      }
 
-    -webkit-animation: action 1s infinite alternate;
-    animation: action 1s infinite alternate;
+      a {
+        color: var(--white);
+        text-decoration: none;
+
+        &.active {
+          color: var(--black);
+        }
+      }
+    }
   }
 }
