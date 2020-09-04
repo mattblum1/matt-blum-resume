@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
+
+import { ScrollSpyService } from 'ng-spy';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'matt-blum-resume';
+
+  sectionInView: string = '';
 
   skills: Skills[] = [
     { label: 'JavaScript', rating: 5 },
@@ -29,6 +33,17 @@ export class AppComponent {
     { label: 'PrimeNG', rating: 5 },
     { label: 'Scrum', rating: 5 },
   ];
+
+  constructor(private spyService: ScrollSpyService) {}
+
+  ngAfterViewInit() {
+    this.spyService.spy({ thresholdBottom: 0 });
+
+    this.spyService.activeSpyTarget.subscribe((activeTargetName: string) => {
+      this.sectionInView = activeTargetName;
+      console.log(activeTargetName);
+    });
+  }
 
   scrollToId(selector: string) {
     const el = document.getElementById(selector);

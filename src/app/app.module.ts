@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
+import { ScrollSpyModule } from 'ng-spy';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { NgModule } from '@angular/core';
     MatCardModule,
     MatIconModule,
     AnimateModule,
+    ScrollSpyModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

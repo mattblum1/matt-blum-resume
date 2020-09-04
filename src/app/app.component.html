@@ -1,4 +1,4 @@
-<section class="cover">
+<section class="cover" spyTarget="cover">
   <div class="cover-content">
     <h1 class="title" wmAnimate="fadeInUp" aos>Matt Blum</h1>
     <!-- .title -->
@@ -45,23 +45,54 @@
 
 <nav>
   <ul>
-    <li (click)="scrollToId('profile')">Profile</li>
-    <li (click)="scrollToId('skills')" class="active">Skills</li>
-    <li (click)="scrollToId('projects')">Projects</li>
-    <li (click)="scrollToId('experience')">Experience</li>
-    <li (click)="scrollToId('education')">Education</li>
+    <li
+      (click)="scrollToId('profile')"
+      [ngClass]="{ active: sectionInView === 'profile' }"
+    >
+      Profile
+    </li>
+    <li
+      (click)="scrollToId('skills')"
+      [ngClass]="{ active: sectionInView === 'skills' }"
+    >
+      Skills
+    </li>
+    <li
+      (click)="scrollToId('projects')"
+      [ngClass]="{ active: sectionInView === 'projects' }"
+    >
+      Projects
+    </li>
+    <li
+      (click)="scrollToId('experience')"
+      [ngClass]="{ active: sectionInView === 'experience' }"
+    >
+      Experience
+    </li>
+    <li
+      (click)="scrollToId('education')"
+      [ngClass]="{ active: sectionInView === 'education' }"
+    >
+      Education
+    </li>
   </ul>
 </nav>
 
 <div class="container">
-  <section id="header" class="header" wmAnimate="fadeInDown" aos>
+  <section
+    id="header"
+    class="header"
+    spyTarget="header"
+    wmAnimate="fadeInDown"
+    aos
+  >
     <h1 class="side-title">
       <a href="#">Matt Blum</a>
     </h1>
   </section>
   <!-- #header -->
 
-  <section id="profile" wmAnimate="fadeInDown" aos>
+  <section id="profile" spyTarget="profile" wmAnimate="fadeInDown" aos>
     <mat-card>
       <div class="header">
         <h2 class="title" wmAnimate="fadeInUp" aos>Profile</h2>
@@ -77,9 +108,9 @@
       <!-- .content -->
     </mat-card>
   </section>
-  <!-- #education -->
+  <!-- #profile -->
 
-  <section id="skills" wmAnimate="fadeInDown" aos>
+  <section id="skills" spyTarget="skills" wmAnimate="fadeInDown" aos>
     <mat-card>
       <div class="header">
         <h2 class="title" wmAnimate="fadeInUp" aos>Skills</h2>
@@ -115,9 +146,9 @@
       <!-- .content -->
     </mat-card>
   </section>
-  <!-- #skill-set -->
+  <!-- #skills -->
 
-  <section id="projects" wmAnimate="fadeInDown" aos>
+  <section id="projects" spyTarget="projects" wmAnimate="fadeInDown" aos>
     <mat-card>
       <div class="header">
         <h2 class="title" class="title" wmAnimate="fadeInUp" aos>Projects</h2>
@@ -135,7 +166,7 @@
   </section>
   <!-- #projects -->
 
-  <section id="experience" wmAnimate="fadeInDown" aos>
+  <section id="experience" spyTarget="experience" wmAnimate="fadeInDown" aos>
     <mat-card>
       <div class="header">
         <h2 class="title" wmAnimate="fadeInUp" aos>Experience</h2>
@@ -153,7 +184,7 @@
   </section>
   <!-- #experience -->
 
-  <section id="education" wmAnimate="fadeInDown" aos>
+  <section id="education" spyTarget="education" wmAnimate="fadeInDown" aos>
     <mat-card id="education">
       <div class="header">
         <h2 class="title" class="title" wmAnimate="fadeInUp" aos>Education</h2>
