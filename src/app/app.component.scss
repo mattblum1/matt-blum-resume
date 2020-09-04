@@ -5,9 +5,9 @@ $cover-height: 100vh;
       rgba(103, 58, 183, 0.75),
       rgba(255, 215, 64, 0.75)
     ),
-    // url("../assets/images/cover/your-name-1.png");
-    // url("../assets/images/cover/your-name-2.png");
-    url("../assets/images/cover/your-name-3.png");
+    url("../assets/images/cover/your-name.png");
+  // url("../assets/images/cover/your-name-2.png");
+  // url("../assets/images/cover/your-name-3.png");
   // url("../assets/images/cover/tokyo-ghoul.png");
 
   align-items: center;
@@ -140,5 +140,22 @@ nav {
         }
       }
     }
+  }
+}
+
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
   }
 }
