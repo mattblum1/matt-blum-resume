@@ -1,0 +1,36 @@
+.animate__delay-05s {
+  animation-delay: 0.5s;
+}
+
+.animate__delay-15s {
+  animation-delay: 1.5s;
+}
+
+.animate__delay-25s {
+  animation-delay: 1.5s;
+}
+
+.animate__delay-35s {
+  animation-delay: 1.5s;
+}
+
+.animate__delay-45s {
+  animation-delay: 1.5s;
+}
+
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}

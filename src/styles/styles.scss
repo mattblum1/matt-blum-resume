@@ -2,7 +2,9 @@
 // @import "~bootstrap/dist/css/bootstrap.min";
 @import "~bootstrap/dist/css/bootstrap-grid.min";
 
+@import "./base/animations";
 @import "./base/colors";
+@import "./base/lib";
 @import "./components/mat-buttons";
 @import "./components/mat-cards";
 @import "./themes/resume-mat-theme";
@@ -13,6 +15,7 @@ body {
 }
 
 body {
+  background-color: var(--dark-gray);
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
@@ -26,23 +29,70 @@ hr {
   padding: 0;
 }
 
-section {
-  padding: 20px 0;
+mat-card {
+  margin-bottom: 40px;
+
+  &.mat-card {
+    padding: 0;
+  }
+
+  .content {
+    padding: 16px;
+
+    .star {
+      color: var(--primary);
+    }
+
+    .star-empty {
+      color: var(--gray);
+    }
+  }
+
+  .header {
+    margin-bottom: 40px;
+
+    .title {
+      background-color: var(--primary);
+      color: var(--white);
+      float: left;
+      font-size: 36px;
+      margin: 20px 0 0;
+      // max-width: 75%;
+      padding: 30px;
+    }
+
+    .title-blurb {
+      background-color: var(--secondary);
+      clear: both;
+      float: left;
+      font-size: 12px;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      padding: 16px 30px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+section.header {
+  padding-bottom: 95px;
+  padding-top: 50px;
 }
 
 .mat-typography {
-  h1 {
-    font-size: 63px;
-    font-weight: 500;
-  }
+  .side-title {
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 12px;
+    margin-right: 20px;
+    text-transform: uppercase;
 
-  h2 {
-    font-size: 54px;
-    font-weight: 500;
-  }
-
-  h3 {
-    font-size: 28px;
-    font-weight: 200;
+    a {
+      border-left: 10px solid var(--primary);
+      color: var(--white);
+      float: left;
+      padding-left: 20px;
+      text-decoration: none;
+    }
   }
 }

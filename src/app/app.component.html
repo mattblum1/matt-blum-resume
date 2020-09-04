@@ -1,47 +1,79 @@
 <section class="cover">
-  <div class="container">
-    <div class="title">
-      <h1 class="animate__animated animate__fadeInRight">Matt Blum</h1>
-    </div>
+  <div class="cover-content">
+    <h1 class="title animate__animated animate__fadeInRight">Matt Blum</h1>
     <!-- .title -->
 
-    <div class="description">
-      <h3 class="animate__animated animate__fadeInLeft animate__delay-05s">
-        Front-End Developer
-      </h3>
-    </div>
+    <hr />
+
+    <h3
+      class="description animate__animated animate__fadeInLeft animate__delay-05s"
+    >
+      Front-End Developer
+    </h3>
     <!-- .description -->
 
     <div class="cta">
       <a
         href="mailto:matt.blum@live.com"
         mat-raised-button
-        color="accent"
+        color="primary"
         class="animate__animated animate__fadeInRight animate__delay-1s"
       >
         <mat-icon>email</mat-icon>Contact Me
       </a>
+      <button
+        mat-raised-button
+        color="primary"
+        class="animate__animated animate__fadeInRight animate__delay-15s"
+      >
+        <mat-icon>cloud_download</mat-icon>PDF Version
+      </button>
     </div>
     <!-- .cta -->
-
-    <div
-      class="down-wrapper animate__animated animate__fadeInUp animate__delay-15s"
-      (click)="scrollToId('skills')"
-    >
-      <div class="down">
-        <mat-icon aria-hidden="false" aria-label="Down Arrow"
-          >keyboard_arrow_down</mat-icon
-        >
-      </div>
-    </div>
-    <!-- .down-wrapper -->
   </div>
-</section>
+  <!-- .cover-content -->
 
-<section id="skills">
-  <div class="container">
-    <h2 class="label">Skills</h2>
-    <hr />
+  <div
+    class="down-wrapper animate__animated animate__fadeInUp animate__delay-2s"
+    (click)="scrollToId('header')"
+  >
+    <div class="down">
+      <mat-icon aria-hidden="false" aria-label="Down Arrow"
+        >keyboard_arrow_down</mat-icon
+      >
+    </div>
+  </div>
+  <!-- .down-wrapper -->
+</section>
+<!-- .cover -->
+
+<div class="container">
+  <section id="header" class="header">
+    <h1 class="side-title">
+      <a href="#">Matt Blum</a>
+    </h1>
+  </section>
+  <!-- #header -->
+
+  <mat-card id="about">
+    <div class="header">
+      <h2 class="title">About</h2>
+      <div class="title-blurb">Something, something, something</div>
+      <div class="clear-fix"></div>
+    </div>
+    <!-- .header -->
+    <div class="content">Content</div>
+    <!-- .content -->
+  </mat-card>
+  <!-- #education -->
+
+  <mat-card id="skills">
+    <div class="header">
+      <h2 class="title">Skills</h2>
+      <div class="title-blurb">Something, something, something</div>
+      <div class="clear-fix"></div>
+    </div>
+    <!-- .header -->
     <div class="content">
       <div class="row">
         <div class="col-6" *ngFor="let skill of skills; let i = index">
@@ -65,29 +97,44 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+    <!-- .content -->
+  </mat-card>
+  <!-- #skill-set -->
 
-<section id="experience">
-  <div class="container">
-    <h2 class="label">Experience</h2>
-    <hr />
+  <mat-card id="projects">
+    <div class="header">
+      <h2 class="title">Projects</h2>
+      <div class="title-blurb">Something, something, something</div>
+      <div class="clear-fix"></div>
+    </div>
+    <!-- .header -->
     <div class="content">Content</div>
-  </div>
-</section>
+    <!-- .content -->
+  </mat-card>
+  <!-- #projects -->
 
-<section id="education">
-  <div class="container">
-    <h2 class="label">Education</h2>
-    <hr />
+  <mat-card id="experience">
+    <div class="header">
+      <h2 class="title">Experience</h2>
+      <div class="title-blurb">Something, something, something</div>
+      <div class="clear-fix"></div>
+    </div>
+    <!-- .header -->
     <div class="content">Content</div>
-  </div>
-</section>
+    <!-- .content -->
+  </mat-card>
+  <!-- #experience -->
 
-<section id="projects">
-  <div class="container">
-    <h2 class="label">Projects</h2>
-    <hr />
+  <mat-card id="education">
+    <div class="header">
+      <h2 class="title">Education</h2>
+      <div class="title-blurb">Something, something, something</div>
+      <div class="clear-fix"></div>
+    </div>
+    <!-- .header -->
     <div class="content">Content</div>
-  </div>
-</section>
+    <!-- .content -->
+  </mat-card>
+  <!-- #education -->
+</div>
+<!-- .container -->
