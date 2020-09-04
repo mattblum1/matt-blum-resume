@@ -1,4 +1,4 @@
-<section class="cover" spyTarget="cover">
+<section id="cover" class="cover" spyTarget="cover">
   <div class="cover-content">
     <h1 class="title" wmAnimate="fadeInUp" aos>Matt Blum</h1>
     <!-- .title -->
@@ -43,7 +43,7 @@
 </section>
 <!-- .cover -->
 
-<nav>
+<nav [ngClass]="{ fixed: isPastOneHundredViewHeight }">
   <ul>
     <li
       (click)="scrollToId('profile')"

@@ -8,8 +8,7 @@ import { ScrollSpyService } from 'ng-spy';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
-  title = 'matt-blum-resume';
-
+  isPastOneHundredViewHeight: boolean = false;
   sectionInView: string = '';
 
   skills: Skills[] = [
@@ -37,11 +36,21 @@ export class AppComponent implements AfterViewInit {
   constructor(private spyService: ScrollSpyService) {}
 
   ngAfterViewInit() {
-    this.spyService.spy({ thresholdBottom: 0 });
-
+    // Setup SpyService
+    this.spyService.spy({ thresholdBottom: 500 });
     this.spyService.activeSpyTarget.subscribe((activeTargetName: string) => {
       this.sectionInView = activeTargetName;
       console.log(activeTargetName);
+    });
+
+    // Set isPastOneHundredViewHeight
+    window.addEventListener('scroll', () => {
+      const oneHundredViewHeight = document.getElementById('cover')
+        .offsetHeight;
+      const currentPageYOffset = window.pageYOffset;
+
+      this.isPastOneHundredViewHeight =
+        currentPageYOffset >= oneHundredViewHeight;
     });
   }
 
