@@ -31,7 +31,7 @@
     (click)="scrollToId('header')"
     wmAnimate="fadeInUp"
     aos
-    delay="1250ms"
+    delay="250ms"
   >
     <div class="down">
       <mat-icon aria-hidden="false" aria-label="Down Arrow"
@@ -46,31 +46,31 @@
 <nav [ngClass]="{ fixed: isPastOneHundredViewHeight }">
   <ul>
     <li
-      (click)="scrollToId('profile')"
+      (click)="scrollToId('profile', -20)"
       [ngClass]="{ active: sectionInView === 'profile' }"
     >
       Profile
     </li>
     <li
-      (click)="scrollToId('skills')"
+      (click)="scrollToId('skills', -20)"
       [ngClass]="{ active: sectionInView === 'skills' }"
     >
       Skills
     </li>
     <li
-      (click)="scrollToId('projects')"
+      (click)="scrollToId('projects', -20)"
       [ngClass]="{ active: sectionInView === 'projects' }"
     >
       Projects
     </li>
     <li
-      (click)="scrollToId('experience')"
+      (click)="scrollToId('experience', -20)"
       [ngClass]="{ active: sectionInView === 'experience' }"
     >
       Experience
     </li>
     <li
-      (click)="scrollToId('education')"
+      (click)="scrollToId('education', -20)"
       [ngClass]="{ active: sectionInView === 'education' }"
     >
       Education
@@ -89,6 +89,7 @@
     <h1 class="side-title">
       <a href="#">Matt Blum</a>
     </h1>
+    <h1 class="side-title text-right"><span>Front-End Developer</span></h1>
   </section>
   <!-- #header -->
 

@@ -66,25 +66,27 @@ mat-card {
   }
 }
 
-section.header {
-  padding-bottom: 95px;
-  padding-top: 50px;
-}
-
 .mat-typography {
   .side-title {
+    color: var(--white);
     font-size: 36px;
     line-height: 1;
-    margin-bottom: 12px;
-    margin-right: 20px;
     text-transform: uppercase;
 
     a {
+      background-color: var(--dark-gray);
       border-left: 10px solid var(--primary);
       color: var(--white);
       float: left;
-      padding-left: 20px;
+      padding: 20px;
       text-decoration: none;
+    }
+
+    span {
+      background-color: var(--dark-gray);
+      // border-left: 10px solid var(--primary);
+      float: right;
+      padding: 20px;
     }
   }
 }

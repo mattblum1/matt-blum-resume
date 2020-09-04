@@ -54,17 +54,17 @@ export class AppComponent implements AfterViewInit {
     });
   }
 
-  scrollToId(selector: string) {
-    const el = document.getElementById(selector);
-    el.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  // scrollToId(selector: string, yOffset = -20) {
+  // scrollToId(selector: string, offset = 0) {
   //   const el = document.getElementById(selector);
-  //   const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-  //   window.scrollTo({ top: y, behavior: 'smooth' });
+  //   el.scrollIntoView({ behavior: 'smooth' });
   // }
+
+  scrollToId(selector: string, yOffset: number = 0) {
+    const el = document.getElementById(selector);
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
 }
 
 interface Skills {
