@@ -27,7 +27,7 @@ nav {
       height: 80px;
       justify-content: center;
       text-transform: uppercase;
-      transition: all 0.2s;
+      transition: background-color 0.2s;
       width: 100%;
 
       &.active {
@@ -37,7 +37,7 @@ nav {
 
       &:hover {
         background-color: var(--black);
-        transition: all 0.3s;
+        transition: background-color 0.3s;
       }
     }
   }
