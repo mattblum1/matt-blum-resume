@@ -51,14 +51,17 @@ $cover-height: 100vh;
   // }
 
   .cta {
-    a,
-    button {
+    .button-wrapper {
+      display: inline-block;
       margin-right: 12px;
 
       &:last-child {
         margin-right: 0;
       }
+    }
 
+    a,
+    button {
       &.mat-raised-button {
         mat-icon.mat-icon {
           margin-right: 4px;

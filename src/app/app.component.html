@@ -1,41 +1,37 @@
 <section class="cover">
   <div class="cover-content">
-    <h1 class="title animate__animated animate__fadeInRight">Matt Blum</h1>
+    <h1 class="title" wmAnimate="fadeInDown" aos>Matt Blum</h1>
     <!-- .title -->
 
-    <hr />
+    <hr wmAnimate="fadeInLeft" aos delay="250ms" />
 
-    <h3
-      class="description animate__animated animate__fadeInLeft animate__delay-05s"
-    >
+    <h3 class="description" wmAnimate="fadeInRight" aos delay="500ms">
       Front-End Developer
     </h3>
     <!-- .description -->
 
     <div class="cta">
-      <a
-        href="mailto:matt.blum@live.com"
-        mat-raised-button
-        color="primary"
-        class="animate__animated animate__fadeInRight animate__delay-1s"
-      >
-        <mat-icon>email</mat-icon>Contact Me
-      </a>
-      <button
-        mat-raised-button
-        color="primary"
-        class="animate__animated animate__fadeInRight animate__delay-15s"
-      >
-        <mat-icon>cloud_download</mat-icon>PDF Version
-      </button>
+      <div class="button-wrapper" wmAnimate="fadeInUp" aos delay="750ms">
+        <a href="mailto:matt.blum@live.com" mat-raised-button color="primary">
+          <mat-icon>email</mat-icon>Contact Me
+        </a>
+      </div>
+      <div class="button-wrapper" wmAnimate="fadeInRight" aos delay="1000ms">
+        <button mat-raised-button color="primary">
+          <mat-icon>cloud_download</mat-icon>PDF Version
+        </button>
+      </div>
     </div>
     <!-- .cta -->
   </div>
   <!-- .cover-content -->
 
   <div
-    class="down-wrapper animate__animated animate__fadeInUp animate__delay-2s"
+    class="down-wrapper"
     (click)="scrollToId('header')"
+    wmAnimate="fadeInUp"
+    aos
+    delay="1250ms"
   >
     <div class="down">
       <mat-icon aria-hidden="false" aria-label="Down Arrow"
@@ -58,7 +54,7 @@
 </nav>
 
 <div class="container">
-  <section id="header" class="header">
+  <section id="header" class="header" wmAnimate="fadeInDown" aos>
     <h1 class="side-title">
       <a href="#">Matt Blum</a>
     </h1>
