@@ -48,48 +48,68 @@
     <li
       (click)="scrollToId('profile', -20)"
       [ngClass]="{ active: sectionInView === 'profile' }"
+      wmAnimate="fadeInRight"
+      aos
     >
       Profile
     </li>
     <li
       (click)="scrollToId('skills', -20)"
       [ngClass]="{ active: sectionInView === 'skills' }"
+      wmAnimate="fadeInRight"
+      aos
+      delay="250ms"
     >
       Skills
     </li>
     <li
       (click)="scrollToId('projects', -20)"
       [ngClass]="{ active: sectionInView === 'projects' }"
+      wmAnimate="fadeInRight"
+      aos
+      delay="500ms"
     >
       Projects
     </li>
     <li
       (click)="scrollToId('experience', -20)"
       [ngClass]="{ active: sectionInView === 'experience' }"
+      wmAnimate="fadeInRight"
+      aos
+      delay="750ms"
     >
       Experience
     </li>
     <li
       (click)="scrollToId('education', -20)"
       [ngClass]="{ active: sectionInView === 'education' }"
+      wmAnimate="fadeInRight"
+      aos
+      delay="1000ms"
     >
       Education
+    </li>
+    <li
+      (click)="scrollToId('cover', -20)"
+      wmAnimate="fadeInRight"
+      aos
+      delay="1250ms"
+    >
+      <mat-icon aria-hidden="false" aria-label="Up Arrow"
+        >keyboard_arrow_up</mat-icon
+      >
     </li>
   </ul>
 </nav>
 
 <div class="container">
-  <section
-    id="header"
-    class="header"
-    spyTarget="header"
-    wmAnimate="fadeInDown"
-    aos
-  >
-    <h1 class="side-title">
+  <section id="header" class="header" spyTarget="header">
+    <h1 class="side-title" wmAnimate="fadeInRight" aos>
       <a href="#">Matt Blum</a>
     </h1>
-    <h1 class="side-title text-right"><span>Front-End Developer</span></h1>
+    <h1 class="side-title" wmAnimate="fadeInRight" aos delay="250ms">
+      <span>Front-End Developer</span>
+    </h1>
   </section>
   <!-- #header -->
 
