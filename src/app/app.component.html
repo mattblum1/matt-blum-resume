@@ -1,6 +1,61 @@
-<nav class="mobile">
-  <mat-icon>menu</mat-icon>
+<nav class="mobile" [ngClass]="{ fixed: isPastOneHundredViewHeight }">
+  <mat-toolbar>
+    <button
+      mat-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
 </nav>
+
+<mat-menu #menu="matMenu">
+  <button
+    mat-menu-item
+    (click)="scrollToId('profile', -68)"
+    [ngClass]="{ active: sectionInView === 'profile' }"
+  >
+    <span>Profile</span>
+  </button>
+  <button
+    mat-menu-item
+    (click)="scrollToId('skills', -68)"
+    [ngClass]="{ active: sectionInView === 'skills' }"
+  >
+    <span>Skills</span>
+  </button>
+  <button
+    mat-menu-item
+    (click)="scrollToId('projects', -68)"
+    [ngClass]="{ active: sectionInView === 'projects' }"
+  >
+    <span>Projects</span>
+  </button>
+  <button
+    mat-menu-item
+    (click)="scrollToId('career', -68)"
+    [ngClass]="{ active: sectionInView === 'career' }"
+  >
+    <span>Career</span>
+  </button>
+  <button
+    mat-menu-item
+    (click)="scrollToId('education', -68)"
+    [ngClass]="{ active: sectionInView === 'education' }"
+  >
+    <span>Education</span>
+  </button>
+  <button
+    mat-menu-item
+    (click)="scrollToId('landing', -68)"
+    class="text-center"
+  >
+    <mat-icon aria-hidden="false" aria-label="Up Arrow"
+      >keyboard_arrow_up</mat-icon
+    >
+  </button>
+</mat-menu>
 
 <section id="landing" class="landing" spyTarget="landing">
   <div class="landing-content">

@@ -1,21 +1,34 @@
-$nav-mobile-height: 48px;
+nav.mobile.fixed {
+  mat-toolbar {
+    height: 48px;
+    transition: height 0.2s;
 
-// nav.mobile {
-//   background-color: var(--primary);
-//   color: var(--white);
-//   display: flex;
-//   height: $nav-mobile-height;
-//   justify-content: flex-end;
-//   position: fixed;
-//   right: 0;
-//   top: 0;
-//   width: 100%;
-//   z-index: 1;
-// }
+    mat-icon {
+      opacity: 1;
+    }
+  }
+}
 
-// .mobile-nav {
-//   position: fixed;
-// }
+nav.mobile {
+  mat-toolbar {
+    background-color: var(--primary);
+    color: var(--white);
+    display: flex;
+    height: 0;
+    justify-content: flex-end;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: height 0.3s;
+    width: 100%;
+    z-index: 1;
+
+    mat-icon {
+      opacity: 0;
+    }
+  }
+}
 
 nav.desktop {
   display: none;
@@ -102,7 +115,6 @@ nav.desktop {
     position: absolute;
     transition: background-color 0.3s;
     width: 100%;
-    z-index: 10;
 
     &:hover {
       background-color: var(--black);
@@ -129,7 +141,7 @@ section {
     display: flex;
     justify-content: space-between;
     padding-bottom: 95px;
-    padding-top: 50px;
+    padding-top: 98px;
   }
 
   // TODO: Remove after content has been supplied
