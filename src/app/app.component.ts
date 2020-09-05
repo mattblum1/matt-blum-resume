@@ -46,7 +46,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     // Setup SpyService
-    this.spyService.spy({ thresholdBottom: 500 });
+    this.spyService.spy({ thresholdBottom: 300 });
     this.spyService.activeSpyTarget.subscribe(
       (activeTargetName: string) => (this.sectionInView = activeTargetName)
     );
