@@ -31,10 +31,12 @@ mat-card {
 
     .star {
       color: var(--primary);
+      pointer-events: none;
     }
 
     .star-empty {
       color: var(--gray);
+      pointer-events: none;
     }
   }
 
@@ -58,19 +60,21 @@ mat-card {
       font-size: 12px;
       letter-spacing: 1px;
       line-height: 1.5;
-      min-height: 50px;
-      min-width: 200px;
+      // min-height: 50px;
+      // min-width: 200px;
       padding: 16px 30px;
       text-transform: uppercase;
     }
   }
 }
 
+$accent-line-height: 76px;
 .mat-typography {
   .side-title {
     color: var(--white);
     font-size: 36px;
     line-height: 1;
+    height: $accent-line-height;
     text-transform: uppercase;
 
     a {
@@ -80,13 +84,54 @@ mat-card {
       float: left;
       padding: 20px;
       text-decoration: none;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: var(--black);
+        transition: background-color 0.3s;
+      }
     }
 
     span {
       background-color: var(--dark-gray);
       // border-left: 10px solid var(--primary);
       float: right;
+      position: relative;
       padding: 20px;
+
+      .top-line {
+        background-color: transparent;
+        border-top: 10px var(--primary) solid;
+        height: calc(100% - 10px);
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: $accent-line-height;
+      }
     }
   }
 }
+
+// .line-container {
+//   opacity: 0.05;
+//   position: relative;
+
+//   .line {
+//     background: var(--primary);
+//     height: 150px;
+//     margin: 0 280.5px;
+//     position: absolute;
+//     right: 0px;
+//     top: 0px;
+//     width: 4px;
+//     z-index: 0;
+//   }
+
+//   .line-x {
+//     transform: rotate(45deg);
+//   }
+
+//   .line-x-2 {
+//     transform: rotate(-45deg);
+//   }
+// }

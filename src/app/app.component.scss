@@ -20,7 +20,6 @@ nav {
     li {
       align-items: center;
       background-color: var(--dark-gray);
-      // border-bottom: 1px solid var(--white);
       color: var(--white);
       cursor: pointer;
       display: flex;
@@ -36,7 +35,7 @@ nav {
       }
 
       &:hover {
-        background-color: var(--black);
+        background-color: var(--primary);
         transition: background-color 0.3s;
       }
     }
@@ -58,7 +57,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--white);
+  color: var(--black);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -83,7 +82,7 @@ nav {
 
   hr {
     border: 0;
-    border-top: 1px solid var(--white);
+    border-top: 1px solid var(--off-black);
     display: block;
     height: 1px;
     // margin: 1em 0;
@@ -127,16 +126,23 @@ nav {
 
   .down-wrapper {
     align-items: center;
-    background-color: var(--white);
+    background-color: var(--dark-gray);
     bottom: 0;
-    color: var(--dark-gray);
+    color: var(--white);
     cursor: pointer;
     display: flex;
     height: 80px;
     justify-content: center;
     position: absolute;
     right: 5%;
+    transition: background-color 0.3s;
     width: 110px;
+
+    &:hover {
+      background-color: var(--primary);
+      color: var(--white);
+      transition: background-color 0.2s, color 0.2s;
+    }
 
     .down {
       align-items: baseline;
@@ -156,16 +162,18 @@ nav {
   }
 }
 
-section.header {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  padding-bottom: 95px;
-  padding-top: 50px;
-}
+section {
+  &.header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding-bottom: 95px;
+    padding-top: 50px;
+  }
 
-section mat-card {
-  min-height: 500px;
+  mat-card {
+    min-height: 500px;
+  }
 }
 
 @-webkit-keyframes bounce {
