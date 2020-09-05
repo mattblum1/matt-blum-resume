@@ -103,22 +103,28 @@
 
 <div class="container">
   <section id="header" class="header" spyTarget="header">
-    <h1 class="side-title" wmAnimate="fadeInRight" aos>
+    <h1 class="side-title" wmAnimate="fadeInDown" aos>
       <a href="#">Matt Blum</a>
     </h1>
-    <h1 class="side-title" wmAnimate="fadeInRight" aos delay="250ms">
+    <h1 class="side-title" wmAnimate="fadeInDown" aos delay="250ms">
       <span><span class="top-line">&nbsp;</span>Front-End Developer</span>
     </h1>
   </section>
   <!-- #header -->
 
-  <section id="profile" spyTarget="profile" wmAnimate="fadeInDown" aos>
+  <section
+    id="profile"
+    spyTarget="profile"
+    wmAnimate="fadeInDown"
+    aos
+    delay="500ms"
+  >
     <mat-card>
       <app-section-header
         [title]="'Profile'"
         [titleBlurb]="'About Me And My Passions'"
       ></app-section-header>
-      <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
+      <div class="content">
         I'm a Front-End Developer and take pride in creating beautiful, clean UI
         and UX. I write efficient, readable code and have a keen eye for detail.
       </div>
@@ -127,25 +133,25 @@
   </section>
   <!-- #profile -->
 
-  <section id="skills" spyTarget="skills">
+  <section id="skills" spyTarget="skills" wmAnimate="fadeInDown" aos>
     <mat-card>
       <app-section-header
         [title]="'Skills'"
         [titleBlurb]="'What I Have To Offer'"
       ></app-section-header>
-      <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
-        <div class="sub-section" wmAnimate="fadeInDown" aos>
+      <div class="content">
+        <div class="sub-section">
           <div class="row">
             <div class="col"><h2>Front-End</h2></div>
           </div>
           <!-- .row -->
           <div class="row">
-            <div class="col-4" *ngFor="let skill of frontEndSkills">
+            <div class="col-md-4" *ngFor="let skill of frontEndSkills">
               <div class="row">
-                <div class="col-3">
+                <div class="col-md-3">
                   {{ skill.label }}
                 </div>
-                <div class="col-9">
+                <div class="col-md-9">
                   <mat-icon
                     class="star"
                     *ngFor="let item of [].constructor(skill.rating)"
@@ -164,18 +170,18 @@
         </div>
         <!-- .sub-section -->
 
-        <div class="sub-section" wmAnimate="fadeInDown" aos delay="250ms">
+        <div class="sub-section">
           <div class="row">
             <div class="col"><h2>Libraries</h2></div>
           </div>
           <!-- .row -->
           <div class="row">
-            <div class="col-4" *ngFor="let skill of librarySkills">
+            <div class="col-md-4" *ngFor="let skill of librarySkills">
               <div class="row">
-                <div class="col-3">
+                <div class="col-md-3">
                   {{ skill.label }}
                 </div>
-                <div class="col-9">
+                <div class="col-md-9">
                   <mat-icon
                     class="star"
                     *ngFor="let item of [].constructor(skill.rating)"
@@ -194,18 +200,18 @@
         </div>
         <!-- .sub-section -->
 
-        <div class="sub-section" wmAnimate="fadeInDown" aos delay="500ms">
+        <div class="sub-section">
           <div class="row">
             <div class="col"><h2>Miscellaneous</h2></div>
           </div>
           <!-- .row -->
           <div class="row">
-            <div class="col-4" *ngFor="let skill of miscSkills">
+            <div class="col-md-4" *ngFor="let skill of miscSkills">
               <div class="row">
-                <div class="col-3">
+                <div class="col-md-3">
                   {{ skill.label }}
                 </div>
-                <div class="col-9">
+                <div class="col-md-9">
                   <mat-icon
                     class="star"
                     *ngFor="let item of [].constructor(skill.rating)"
@@ -235,9 +241,7 @@
         [title]="'Projects'"
         [titleBlurb]="'Web Apps I\'ve worked on'"
       ></app-section-header>
-      <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
-        Content
-      </div>
+      <div class="content">Content</div>
       <!-- .content -->
     </mat-card>
   </section>
@@ -249,9 +253,7 @@
         [title]="'Career'"
         [titleBlurb]="'Experience'"
       ></app-section-header>
-      <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
-        Content
-      </div>
+      <div class="content">Content</div>
       <!-- .content -->
     </mat-card>
   </section>
@@ -263,9 +265,7 @@
         [title]="'Education'"
         [titleBlurb]="'Formal Training'"
       ></app-section-header>
-      <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
-        Content
-      </div>
+      <div class="content">Content</div>
       <!-- .content -->
     </mat-card>
   </section>
