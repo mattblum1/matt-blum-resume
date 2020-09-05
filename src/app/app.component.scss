@@ -7,7 +7,7 @@ nav {
   right: 5%;
 
   &.fixed {
-    padding-top: 50px; // 33px
+    padding-top: 50px;
     position: fixed;
     top: 0;
     transition: padding 1.25s;
@@ -19,7 +19,7 @@ nav {
 
     li {
       align-items: center;
-      background-color: var(--dark-gray);
+      background-color: var(--off-black);
       color: var(--white);
       cursor: pointer;
       display: flex;
@@ -31,11 +31,10 @@ nav {
 
       &.active {
         background-color: var(--primary);
-        // color: var(--black);
       }
 
       &:hover {
-        background-color: var(--primary);
+        background-color: var(--black);
         transition: background-color 0.3s;
       }
     }
@@ -57,7 +56,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--black);
+  color: var(--off-black);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -126,7 +125,7 @@ nav {
 
   .down-wrapper {
     align-items: center;
-    background-color: var(--dark-gray);
+    background-color: var(--off-black);
     bottom: 0;
     color: var(--white);
     cursor: pointer;
@@ -139,7 +138,7 @@ nav {
     width: 110px;
 
     &:hover {
-      background-color: var(--primary);
+      background-color: var(--black);
       color: var(--white);
       transition: background-color 0.2s, color 0.2s;
     }
@@ -150,22 +149,17 @@ nav {
     }
 
     mat-icon {
-      // font-size: 63px;
-      // width: 63px;
-
+      animation: bounce 1s infinite alternate;
       position: relative;
       top: 5px;
-
-      -webkit-animation: bounce 1s infinite alternate;
-      animation: bounce 1s infinite alternate;
     }
   }
 }
 
 section {
   &.header {
-    display: flex;
     align-content: center;
+    display: flex;
     justify-content: space-between;
     padding-bottom: 95px;
     padding-top: 50px;

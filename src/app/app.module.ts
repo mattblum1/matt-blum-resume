@@ -7,9 +7,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
 import { ScrollSpyModule } from 'ng-spy';
+import { SectionHeaderComponent } from './components/section-header/section-header.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SectionHeaderComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
