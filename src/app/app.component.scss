@@ -41,15 +41,13 @@ nav {
   }
 }
 
-.cover {
+.landing {
   background: linear-gradient(
       rgba(103, 58, 183, 0.75),
       rgba(255, 215, 64, 0.75)
     ),
-    url("../assets/images/cover/your-name.png");
-  // url("../assets/images/cover/your-name-2.png");
-  // url("../assets/images/cover/your-name-3.png");
-  // url("../assets/images/cover/tokyo-ghoul.png");
+    url("../assets/images/cover/subtle.webp");
+  // url("../assets/images/cover/your-name.webp");
 
   align-items: center;
   background-attachment: fixed;
@@ -89,7 +87,7 @@ nav {
     padding: 0;
   }
 
-  // .cover-content {
+  // .landing-content {
   //   background-color: rgba(103, 58, 183, 0.65);
   //   padding: 32px 64px;
   //   text-align: center;

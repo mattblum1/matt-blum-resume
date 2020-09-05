@@ -53,7 +53,7 @@ export class AppComponent implements AfterViewInit {
 
     // Set isPastOneHundredViewHeight
     window.addEventListener('scroll', () => {
-      const oneHundredViewHeight = document.getElementById('cover')
+      const oneHundredViewHeight = document.getElementById('landing')
         .offsetHeight;
       const currentPageYOffset = window.pageYOffset;
 

@@ -1,5 +1,5 @@
-<section id="cover" class="cover" spyTarget="cover">
-  <div class="cover-content">
+<section id="landing" class="landing" spyTarget="landing">
+  <div class="landing-content">
     <h1 class="title" wmAnimate="fadeInUp">Matt Blum</h1>
     <!-- .title -->
 
@@ -24,7 +24,7 @@
     </div>
     <!-- .cta -->
   </div>
-  <!-- .cover-content -->
+  <!-- .landing-content -->
 
   <div
     class="down-wrapper"
@@ -40,7 +40,7 @@
   </div>
   <!-- .down-wrapper -->
 </section>
-<!-- .cover -->
+<!-- .landing -->
 
 <nav [ngClass]="{ fixed: isPastOneHundredViewHeight }">
   <ul>
@@ -89,7 +89,7 @@
       Education
     </li>
     <li
-      (click)="scrollToId('cover', -20)"
+      (click)="scrollToId('landing', -20)"
       wmAnimate="fadeInRight"
       aos
       delay="1250ms"
