@@ -1,24 +1,24 @@
-@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+// @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 // @import "@angular/material/prebuilt-themes/indigo-pink.css";
 // @import "@angular/material/prebuilt-themes/pink-bluegrey.css";
 // @import "@angular/material/prebuilt-themes/purple-green.css";
 
-// @import "../palettes/resume-mat-palette";
+@import "../palettes/resume-mat-palette";
 
-// @include mat-core();
+@include mat-core();
 
-// $resume-primary: mat-palette($mat-resume-primary);
-// $resume-accent: mat-palette($mat-resume-secondary);
-// $resume-warn: mat-palette($mat-red);
+$resume-primary: mat-palette($mat-resume-primary);
+$resume-accent: mat-palette($mat-resume-secondary);
+$resume-warn: mat-palette($mat-red);
 
-// $resume-theme: mat-light-theme(
-//   (
-//     color: (
-//       primary: $resume-primary,
-//       accent: $resume-accent,
-//       warn: $resume-warn,
-//     ),
-//   )
-// );
+$resume-theme: mat-light-theme(
+  (
+    color: (
+      primary: $resume-primary,
+      accent: $resume-accent,
+      warn: $resume-warn,
+    ),
+  )
+);
 
-// @include angular-material-theme($resume-theme);
+@include angular-material-theme($resume-theme);
