@@ -1,7 +1,11 @@
 @import "../base/vars";
 
 @media (min-width: $xxxl) {
-  nav {
+  nav.mobile {
+    display: none;
+  }
+
+  nav.desktop {
     display: block;
     margin: 0;
     padding: 0;
