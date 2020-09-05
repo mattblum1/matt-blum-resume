@@ -19,6 +19,21 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+a {
+  color: var(--primary);
+  text-decoration: none;
+  // transition: background-color 0.3s, color 0.3s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    // background-color: var(--primary);
+    // color: var(--white);
+    text-decoration: underline;
+    // transition: background-color 0.3s, color 0.3s;
+  }
+}
+
 mat-card {
   margin-bottom: 40px;
 
