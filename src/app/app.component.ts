@@ -18,7 +18,7 @@ export class AppComponent implements AfterViewInit {
     { label: 'NgRx', rating: 4 },
     { label: 'Redux', rating: 4 },
     { label: 'HTML5', rating: 5 },
-    { label: 'CSS3', rating: 5 },
+    { label: 'SCSS/CSS3', rating: 5 },
     { label: 'SEO', rating: 4 },
     { label: 'Responsive Design', rating: 5 },
     // { label: 'React', rating: 1 },

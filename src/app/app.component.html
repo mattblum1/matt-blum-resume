@@ -71,13 +71,13 @@
       Projects
     </li>
     <li
-      (click)="scrollToId('experience', -20)"
-      [ngClass]="{ active: sectionInView === 'experience' }"
+      (click)="scrollToId('career', -20)"
+      [ngClass]="{ active: sectionInView === 'career' }"
       wmAnimate="fadeInRight"
       aos
       delay="750ms"
     >
-      Experience
+      Career
     </li>
     <li
       (click)="scrollToId('education', -20)"
@@ -116,10 +116,11 @@
     <mat-card>
       <app-section-header
         [title]="'Profile'"
-        [titleBlurb]="'About Me'"
+        [titleBlurb]="'About Me And My Passions'"
       ></app-section-header>
       <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
-        Content
+        I'm a Front-End Developer and take pride in creating beautiful, clean UI
+        and UX. I write efficient, readable code and have a keen eye for detail.
       </div>
       <!-- .content -->
     </mat-card>
@@ -130,7 +131,7 @@
     <mat-card>
       <app-section-header
         [title]="'Skills'"
-        [titleBlurb]="'Skills Blurb'"
+        [titleBlurb]="'What I Have To Offer'"
       ></app-section-header>
       <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
         <div class="sub-section" wmAnimate="fadeInDown" aos>
@@ -232,7 +233,7 @@
     <mat-card>
       <app-section-header
         [title]="'Projects'"
-        [titleBlurb]="'Projects Blurb'"
+        [titleBlurb]="'Web Apps I\'ve worked on'"
       ></app-section-header>
       <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
         Content
@@ -242,11 +243,11 @@
   </section>
   <!-- #projects -->
 
-  <section id="experience" spyTarget="experience" wmAnimate="fadeInDown" aos>
+  <section id="career" spyTarget="career" wmAnimate="fadeInDown" aos>
     <mat-card>
       <app-section-header
-        [title]="'Experience'"
-        [titleBlurb]="'Experience Blurb'"
+        [title]="'Career'"
+        [titleBlurb]="'Experience'"
       ></app-section-header>
       <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
         Content
@@ -254,13 +255,13 @@
       <!-- .content -->
     </mat-card>
   </section>
-  <!-- #experience -->
+  <!-- #career -->
 
   <section id="education" spyTarget="education" wmAnimate="fadeInDown" aos>
     <mat-card>
       <app-section-header
         [title]="'Education'"
-        [titleBlurb]="'Education Blurb'"
+        [titleBlurb]="'Formal Training'"
       ></app-section-header>
       <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
         Content
