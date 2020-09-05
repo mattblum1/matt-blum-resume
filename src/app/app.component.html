@@ -146,12 +146,15 @@
           </div>
           <!-- .row -->
           <div class="row">
-            <div class="col-md-4" *ngFor="let skill of frontEndSkills">
+            <div
+              class="col-xs-12 col-sm-6 col-md-4"
+              *ngFor="let skill of frontEndSkills"
+            >
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-xs-6 col-sm-3">
                   {{ skill.label }}
                 </div>
-                <div class="col-md-9">
+                <div class="col-xs-6 col-sm-9">
                   <mat-icon
                     class="star"
                     *ngFor="let item of [].constructor(skill.rating)"
@@ -176,12 +179,15 @@
           </div>
           <!-- .row -->
           <div class="row">
-            <div class="col-md-4" *ngFor="let skill of librarySkills">
+            <div
+              class="col-xs-12 col-sm-6 col-md-4"
+              *ngFor="let skill of librarySkills"
+            >
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-xs-6 col-sm-3">
                   {{ skill.label }}
                 </div>
-                <div class="col-md-9">
+                <div class="col-xs-6 col-sm-9">
                   <mat-icon
                     class="star"
                     *ngFor="let item of [].constructor(skill.rating)"
@@ -206,12 +212,15 @@
           </div>
           <!-- .row -->
           <div class="row">
-            <div class="col-md-4" *ngFor="let skill of miscSkills">
+            <div
+              class="col-xs-12 col-sm-6 col-md-4"
+              *ngFor="let skill of miscSkills"
+            >
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-xs-6 col-sm-3">
                   {{ skill.label }}
                 </div>
-                <div class="col-md-9">
+                <div class="col-xs-6 col-sm-9">
                   <mat-icon
                     class="star"
                     *ngFor="let item of [].constructor(skill.rating)"

@@ -1,44 +1,5 @@
 nav {
-  margin: 0;
-  padding: 0;
-  width: 110px;
-  position: absolute;
-  top: 100%;
-  right: 5%;
-
-  &.fixed {
-    padding-top: 50px;
-    position: fixed;
-    top: 0;
-    transition: padding 1.25s;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-
-    li {
-      align-items: center;
-      background-color: var(--dark-gray);
-      color: var(--white);
-      cursor: pointer;
-      display: flex;
-      height: 80px;
-      justify-content: center;
-      text-transform: uppercase;
-      transition: background-color 0.2s;
-      width: 100%;
-
-      &.active {
-        background-color: var(--primary);
-      }
-
-      &:hover {
-        background-color: var(--black);
-        transition: background-color 0.3s;
-      }
-    }
-  }
+  display: none;
 }
 
 .landing {
@@ -47,7 +8,6 @@ nav {
       rgba(85, 197, 240, 0.25)
     ),
     url("../assets/images/cover/subtle.webp");
-  // url("../assets/images/cover/your-name.webp");
 
   align-items: center;
   background-attachment: fixed;
@@ -87,13 +47,6 @@ nav {
     padding: 0;
   }
 
-  // .landing-content {
-  //   background-color: rgba(103, 58, 183, 0.65);
-  //   padding: 32px 64px;
-  //   text-align: center;
-  //   text-transform: uppercase;
-  // }
-
   .title,
   .description {
     margin: 20px 0;
@@ -128,12 +81,11 @@ nav {
     color: var(--white);
     cursor: pointer;
     display: flex;
-    height: 80px;
+    height: 48px;
     justify-content: center;
     position: absolute;
-    right: 5%;
     transition: background-color 0.3s;
-    width: 110px;
+    width: 100%;
 
     &:hover {
       background-color: var(--black);
@@ -193,3 +145,5 @@ section {
     transform: translateY(-10px);
   }
 }
+
+@import "../styles/base/medias";

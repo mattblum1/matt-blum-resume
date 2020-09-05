@@ -1,0 +1,55 @@
+@import "../base/vars";
+
+@media (min-width: $xxxl) {
+  nav {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 110px;
+    position: absolute;
+    top: 100%;
+    right: 5%;
+
+    &.fixed {
+      padding-top: 50px;
+      position: fixed;
+      top: 0;
+      transition: padding 1.25s;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        align-items: center;
+        background-color: var(--dark-gray);
+        color: var(--white);
+        cursor: pointer;
+        display: flex;
+        height: 80px;
+        justify-content: center;
+        text-transform: uppercase;
+        transition: background-color 0.2s;
+        width: 100%;
+
+        &:hover {
+          background-color: var(--black);
+          transition: background-color 0.3s;
+        }
+
+        &.active {
+          background-color: var(--primary);
+        }
+      }
+    }
+  }
+
+  .landing {
+    .down-wrapper {
+      height: 80px;
+      right: 5%;
+      width: 110px;
+    }
+  }
+}
