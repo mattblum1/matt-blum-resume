@@ -11,37 +11,45 @@ export class AppComponent implements AfterViewInit {
   isPastOneHundredViewHeight: boolean = false;
   sectionInView: string = '';
 
-  skills: Skills[] = [
-    { label: 'JavaScript', rating: 5 },
-    { label: 'TypeScript', rating: 5 },
+  frontEndSkills: Skill[] = [
     { label: 'Angular', rating: 5 },
-    { label: 'React', rating: 1 },
+    { label: 'TypeScript', rating: 5 },
+    { label: 'JavaScript', rating: 4 },
     { label: 'NgRx', rating: 4 },
     { label: 'Redux', rating: 4 },
-    { label: 'C#', rating: 5 },
-    { label: 'ASP.NET', rating: 5 },
-    { label: 'Object Orientated Programming', rating: 5 },
-    { label: 'SQL', rating: 5 },
     { label: 'HTML5', rating: 5 },
     { label: 'CSS3', rating: 5 },
+    { label: 'SEO', rating: 4 },
     { label: 'Responsive Design', rating: 5 },
-    { label: 'SEO', rating: 5 },
-    { label: 'JSON', rating: 5 },
-    { label: 'Material', rating: 5 },
-    { label: 'Bootstrap', rating: 5 },
-    { label: 'PrimeNG', rating: 5 },
-    { label: 'Scrum', rating: 5 },
+    // { label: 'React', rating: 1 },
+    // { label: 'PHP', rating: 1 },
   ];
 
-  constructor(private spyService: ScrollSpyService) {}
+  miscSkills: Skill[] = [
+    { label: 'C#', rating: 4 },
+    { label: 'ASP.NET', rating: 4 },
+    { label: 'OOP', rating: 4 },
+    { label: 'SQL', rating: 4 },
+  ];
+
+  librarySkills: Skill[] = [
+    { label: 'Material', rating: 5 },
+    { label: 'Bootstrap', rating: 4 },
+    { label: 'PrimeNG', rating: 4 },
+  ];
+
+  constructor(private spyService: ScrollSpyService) {
+    this.frontEndSkills = this.frontEndSkills.sort(
+      (a, b) => b.rating - a.rating
+    );
+  }
 
   ngAfterViewInit() {
     // Setup SpyService
     this.spyService.spy({ thresholdBottom: 500 });
-    this.spyService.activeSpyTarget.subscribe((activeTargetName: string) => {
-      this.sectionInView = activeTargetName;
-      console.log(activeTargetName);
-    });
+    this.spyService.activeSpyTarget.subscribe(
+      (activeTargetName: string) => (this.sectionInView = activeTargetName)
+    );
 
     // Set isPastOneHundredViewHeight
     window.addEventListener('scroll', () => {
@@ -67,7 +75,7 @@ export class AppComponent implements AfterViewInit {
   }
 }
 
-interface Skills {
+interface Skill {
   label: string;
   rating: number;
 }

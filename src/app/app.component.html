@@ -126,34 +126,102 @@
   </section>
   <!-- #profile -->
 
-  <section id="skills" spyTarget="skills" wmAnimate="fadeInDown" aos>
+  <section id="skills" spyTarget="skills">
     <mat-card>
       <app-section-header
         [title]="'Skills'"
         [titleBlurb]="'Skills Blurb'"
       ></app-section-header>
       <div class="content" wmAnimate="fadeInDown" aos delay="500ms">
-        <div class="row">
-          <div class="col-6" *ngFor="let skill of skills; let i = index">
-            <div class="row">
-              <div class="col-md">
-                {{ skill.label }}
-              </div>
-              <div class="col-md">
-                <mat-icon
-                  class="star"
-                  *ngFor="let item of [].constructor(skill.rating)"
-                  >star</mat-icon
-                >
-                <mat-icon
-                  class="star-empty"
-                  *ngFor="let item of [].constructor(5 - skill.rating)"
-                  >star</mat-icon
-                >
+        <div class="sub-section" wmAnimate="fadeInDown" aos>
+          <div class="row">
+            <div class="col"><h2>Front-End</h2></div>
+          </div>
+          <!-- .row -->
+          <div class="row">
+            <div class="col-4" *ngFor="let skill of frontEndSkills">
+              <div class="row">
+                <div class="col-3">
+                  {{ skill.label }}
+                </div>
+                <div class="col-9">
+                  <mat-icon
+                    class="star"
+                    *ngFor="let item of [].constructor(skill.rating)"
+                    >star</mat-icon
+                  >
+                  <mat-icon
+                    class="star-empty"
+                    *ngFor="let item of [].constructor(5 - skill.rating)"
+                    >star</mat-icon
+                  >
+                </div>
               </div>
             </div>
           </div>
+          <!-- .row -->
         </div>
+        <!-- .sub-section -->
+
+        <div class="sub-section" wmAnimate="fadeInDown" aos delay="250ms">
+          <div class="row">
+            <div class="col"><h2>Libraries</h2></div>
+          </div>
+          <!-- .row -->
+          <div class="row">
+            <div class="col-4" *ngFor="let skill of librarySkills">
+              <div class="row">
+                <div class="col-3">
+                  {{ skill.label }}
+                </div>
+                <div class="col-9">
+                  <mat-icon
+                    class="star"
+                    *ngFor="let item of [].constructor(skill.rating)"
+                    >star</mat-icon
+                  >
+                  <mat-icon
+                    class="star-empty"
+                    *ngFor="let item of [].constructor(5 - skill.rating)"
+                    >star</mat-icon
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .row -->
+        </div>
+        <!-- .sub-section -->
+
+        <div class="sub-section" wmAnimate="fadeInDown" aos delay="500ms">
+          <div class="row">
+            <div class="col"><h2>Miscellaneous</h2></div>
+          </div>
+          <!-- .row -->
+          <div class="row">
+            <div class="col-4" *ngFor="let skill of miscSkills">
+              <div class="row">
+                <div class="col-3">
+                  {{ skill.label }}
+                </div>
+                <div class="col-9">
+                  <mat-icon
+                    class="star"
+                    *ngFor="let item of [].constructor(skill.rating)"
+                    >star</mat-icon
+                  >
+                  <mat-icon
+                    class="star-empty"
+                    *ngFor="let item of [].constructor(5 - skill.rating)"
+                    >star</mat-icon
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .row -->
+        </div>
+        <!-- .sub-section -->
       </div>
       <!-- .content -->
     </mat-card>
