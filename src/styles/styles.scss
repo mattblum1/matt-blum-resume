@@ -5,6 +5,7 @@
 @import "./base/lib";
 @import "./components/mat-buttons";
 @import "./components/mat-cards";
+// @import "./components/mat-drawer-container";
 @import "./themes/resume-mat-theme";
 
 html,
@@ -115,27 +116,3 @@ $accent-line-height: 76px;
     }
   }
 }
-
-// .line-container {
-//   opacity: 0.05;
-//   position: relative;
-
-//   .line {
-//     background: var(--primary);
-//     height: 150px;
-//     margin: 0 280.5px;
-//     position: absolute;
-//     right: 0px;
-//     top: 0px;
-//     width: 4px;
-//     z-index: 0;
-//   }
-
-//   .line-x {
-//     transform: rotate(45deg);
-//   }
-
-//   .line-x-2 {
-//     transform: rotate(-45deg);
-//   }
-// }

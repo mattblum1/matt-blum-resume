@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { NgModule } from '@angular/core';
 import { ScrollSpyModule } from 'ng-spy';
 import { SectionHeaderComponent } from './components/section-header/section-header.component';
@@ -20,7 +19,6 @@ import { SectionHeaderComponent } from './components/section-header/section-head
     MatIconModule,
     AnimateModule,
     ScrollSpyModule,
-    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

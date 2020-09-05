@@ -1,296 +1,287 @@
-<mat-drawer-container autosize>
-  <mat-drawer #drawer mode="push" hasBackdrop="true" position="end">
-    <p>Auto-resizing sidenav</p>
-  </mat-drawer>
+<nav class="mobile">
+  <mat-icon>menu</mat-icon>
+</nav>
 
-  <nav class="mobile">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-  </nav>
+<section id="landing" class="landing" spyTarget="landing">
+  <div class="landing-content">
+    <h1 class="title" wmAnimate="fadeInUp">Matt Blum</h1>
+    <!-- .title -->
 
-  <section id="landing" class="landing" spyTarget="landing">
-    <div class="landing-content">
-      <h1 class="title" wmAnimate="fadeInUp">Matt Blum</h1>
-      <!-- .title -->
+    <hr wmAnimate="fadeIn" delay="250ms" />
 
-      <hr wmAnimate="fadeIn" delay="250ms" />
+    <h3 class="description" wmAnimate="fadeInDown" delay="500ms">
+      Front-End Developer
+    </h3>
+    <!-- .description -->
 
-      <h3 class="description" wmAnimate="fadeInDown" delay="500ms">
-        Front-End Developer
-      </h3>
-      <!-- .description -->
-
-      <div class="cta">
-        <div class="button-wrapper" wmAnimate="fadeInDown" delay="750ms">
-          <a href="mailto:matt.blum@live.com" mat-raised-button color="primary">
-            <mat-icon>email</mat-icon>Contact Me
-          </a>
-        </div>
-        <div class="button-wrapper" wmAnimate="fadeInDown" delay="1000ms">
-          <button mat-raised-button color="primary">
-            <mat-icon>cloud_download</mat-icon>PDF Version
-          </button>
-        </div>
+    <div class="cta">
+      <div class="button-wrapper" wmAnimate="fadeInDown" delay="750ms">
+        <a href="mailto:matt.blum@live.com" mat-raised-button color="primary">
+          <mat-icon>email</mat-icon>Contact Me
+        </a>
       </div>
-      <!-- .cta -->
+      <div class="button-wrapper" wmAnimate="fadeInDown" delay="1000ms">
+        <button mat-raised-button color="primary">
+          <mat-icon>cloud_download</mat-icon>PDF Version
+        </button>
+      </div>
     </div>
-    <!-- .landing-content -->
+    <!-- .cta -->
+  </div>
+  <!-- .landing-content -->
 
-    <div
-      class="down-wrapper"
-      (click)="scrollToId('header')"
-      wmAnimate="fadeInUp"
+  <div
+    class="down-wrapper"
+    (click)="scrollToId('header')"
+    wmAnimate="fadeInUp"
+    delay="250ms"
+  >
+    <div class="down">
+      <mat-icon aria-hidden="false" aria-label="Down Arrow"
+        >keyboard_arrow_down</mat-icon
+      >
+    </div>
+  </div>
+  <!-- .down-wrapper -->
+</section>
+<!-- .landing -->
+
+<nav class="desktop" [ngClass]="{ fixed: isPastOneHundredViewHeight }">
+  <ul>
+    <li
+      (click)="scrollToId('profile', -20)"
+      [ngClass]="{ active: sectionInView === 'profile' }"
+      wmAnimate="fadeInRight"
+      aos
+    >
+      Profile
+    </li>
+    <li
+      (click)="scrollToId('skills', -20)"
+      [ngClass]="{ active: sectionInView === 'skills' }"
+      wmAnimate="fadeInRight"
+      aos
       delay="250ms"
     >
-      <div class="down">
-        <mat-icon aria-hidden="false" aria-label="Down Arrow"
-          >keyboard_arrow_down</mat-icon
-        >
-      </div>
-    </div>
-    <!-- .down-wrapper -->
-  </section>
-  <!-- .landing -->
-
-  <nav class="desktop" [ngClass]="{ fixed: isPastOneHundredViewHeight }">
-    <ul>
-      <li
-        (click)="scrollToId('profile', -20)"
-        [ngClass]="{ active: sectionInView === 'profile' }"
-        wmAnimate="fadeInRight"
-        aos
-      >
-        Profile
-      </li>
-      <li
-        (click)="scrollToId('skills', -20)"
-        [ngClass]="{ active: sectionInView === 'skills' }"
-        wmAnimate="fadeInRight"
-        aos
-        delay="250ms"
-      >
-        Skills
-      </li>
-      <li
-        (click)="scrollToId('projects', -20)"
-        [ngClass]="{ active: sectionInView === 'projects' }"
-        wmAnimate="fadeInRight"
-        aos
-        delay="500ms"
-      >
-        Projects
-      </li>
-      <li
-        (click)="scrollToId('career', -20)"
-        [ngClass]="{ active: sectionInView === 'career' }"
-        wmAnimate="fadeInRight"
-        aos
-        delay="750ms"
-      >
-        Career
-      </li>
-      <li
-        (click)="scrollToId('education', -20)"
-        [ngClass]="{ active: sectionInView === 'education' }"
-        wmAnimate="fadeInRight"
-        aos
-        delay="1000ms"
-      >
-        Education
-      </li>
-      <li
-        (click)="scrollToId('landing', -20)"
-        wmAnimate="fadeInRight"
-        aos
-        delay="1250ms"
-      >
-        <mat-icon aria-hidden="false" aria-label="Up Arrow"
-          >keyboard_arrow_up</mat-icon
-        >
-      </li>
-    </ul>
-  </nav>
-
-  <div class="container">
-    <section id="header" class="header" spyTarget="header">
-      <h1 class="side-accent" wmAnimate="fadeInDown" aos>
-        <a href="#">Matt Blum</a>
-      </h1>
-      <h1 class="side-accent" wmAnimate="fadeInDown" aos delay="250ms">
-        <span><span class="top-accent">&nbsp;</span>Front-End Developer</span>
-      </h1>
-    </section>
-    <!-- #header -->
-
-    <section
-      id="profile"
-      spyTarget="profile"
-      wmAnimate="fadeInDown"
+      Skills
+    </li>
+    <li
+      (click)="scrollToId('projects', -20)"
+      [ngClass]="{ active: sectionInView === 'projects' }"
+      wmAnimate="fadeInRight"
       aos
       delay="500ms"
     >
-      <mat-card>
-        <app-section-header
-          [title]="'Profile'"
-          [titleBlurb]="'About Me And My Passions'"
-        ></app-section-header>
-        <div class="content">
-          I'm a Front-End Developer and take pride in creating beautiful, clean
-          UI and UX. I write efficient, readable code and have a keen eye for
-          detail.
+      Projects
+    </li>
+    <li
+      (click)="scrollToId('career', -20)"
+      [ngClass]="{ active: sectionInView === 'career' }"
+      wmAnimate="fadeInRight"
+      aos
+      delay="750ms"
+    >
+      Career
+    </li>
+    <li
+      (click)="scrollToId('education', -20)"
+      [ngClass]="{ active: sectionInView === 'education' }"
+      wmAnimate="fadeInRight"
+      aos
+      delay="1000ms"
+    >
+      Education
+    </li>
+    <li
+      (click)="scrollToId('landing', -20)"
+      wmAnimate="fadeInRight"
+      aos
+      delay="1250ms"
+    >
+      <mat-icon aria-hidden="false" aria-label="Up Arrow"
+        >keyboard_arrow_up</mat-icon
+      >
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <section id="header" class="header" spyTarget="header">
+    <h1 class="side-accent" wmAnimate="fadeInDown" aos>
+      <a href="#">Matt Blum</a>
+    </h1>
+    <h1 class="side-accent" wmAnimate="fadeInDown" aos delay="250ms">
+      <span><span class="top-accent">&nbsp;</span>Front-End Developer</span>
+    </h1>
+  </section>
+  <!-- #header -->
+
+  <section
+    id="profile"
+    spyTarget="profile"
+    wmAnimate="fadeInDown"
+    aos
+    delay="500ms"
+  >
+    <mat-card>
+      <app-section-header
+        [title]="'Profile'"
+        [titleBlurb]="'About Me And My Passions'"
+      ></app-section-header>
+      <div class="content">
+        I'm a Front-End Developer and take pride in creating beautiful, clean UI
+        and UX. I write efficient, readable code and have a keen eye for detail.
+      </div>
+      <!-- .content -->
+    </mat-card>
+  </section>
+  <!-- #profile -->
+
+  <section id="skills" spyTarget="skills" wmAnimate="fadeInDown" aos>
+    <mat-card>
+      <app-section-header
+        [title]="'Skills'"
+        [titleBlurb]="'What I Have To Offer'"
+      ></app-section-header>
+      <div class="content">
+        <div class="sub-section">
+          <div class="row">
+            <div class="col"><h2>Front-End</h2></div>
+          </div>
+          <!-- .row -->
+          <div class="row">
+            <div
+              class="col-xs-12 col-sm-6 col-md-4"
+              *ngFor="let skill of frontEndSkills"
+            >
+              <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                  {{ skill.label }}
+                </div>
+                <div class="col-xs-6 col-sm-9">
+                  <mat-icon
+                    class="star"
+                    *ngFor="let item of [].constructor(skill.rating)"
+                    >star</mat-icon
+                  >
+                  <mat-icon
+                    class="star-empty"
+                    *ngFor="let item of [].constructor(5 - skill.rating)"
+                    >star</mat-icon
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .row -->
         </div>
-        <!-- .content -->
-      </mat-card>
-    </section>
-    <!-- #profile -->
+        <!-- .sub-section -->
 
-    <section id="skills" spyTarget="skills" wmAnimate="fadeInDown" aos>
-      <mat-card>
-        <app-section-header
-          [title]="'Skills'"
-          [titleBlurb]="'What I Have To Offer'"
-        ></app-section-header>
-        <div class="content">
-          <div class="sub-section">
-            <div class="row">
-              <div class="col"><h2>Front-End</h2></div>
-            </div>
-            <!-- .row -->
-            <div class="row">
-              <div
-                class="col-xs-12 col-sm-6 col-md-4"
-                *ngFor="let skill of frontEndSkills"
-              >
-                <div class="row">
-                  <div class="col-xs-6 col-sm-3">
-                    {{ skill.label }}
-                  </div>
-                  <div class="col-xs-6 col-sm-9">
-                    <mat-icon
-                      class="star"
-                      *ngFor="let item of [].constructor(skill.rating)"
-                      >star</mat-icon
-                    >
-                    <mat-icon
-                      class="star-empty"
-                      *ngFor="let item of [].constructor(5 - skill.rating)"
-                      >star</mat-icon
-                    >
-                  </div>
+        <div class="sub-section">
+          <div class="row">
+            <div class="col"><h2>Libraries</h2></div>
+          </div>
+          <!-- .row -->
+          <div class="row">
+            <div
+              class="col-xs-12 col-sm-6 col-md-4"
+              *ngFor="let skill of librarySkills"
+            >
+              <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                  {{ skill.label }}
+                </div>
+                <div class="col-xs-6 col-sm-9">
+                  <mat-icon
+                    class="star"
+                    *ngFor="let item of [].constructor(skill.rating)"
+                    >star</mat-icon
+                  >
+                  <mat-icon
+                    class="star-empty"
+                    *ngFor="let item of [].constructor(5 - skill.rating)"
+                    >star</mat-icon
+                  >
                 </div>
               </div>
             </div>
-            <!-- .row -->
           </div>
-          <!-- .sub-section -->
-
-          <div class="sub-section">
-            <div class="row">
-              <div class="col"><h2>Libraries</h2></div>
-            </div>
-            <!-- .row -->
-            <div class="row">
-              <div
-                class="col-xs-12 col-sm-6 col-md-4"
-                *ngFor="let skill of librarySkills"
-              >
-                <div class="row">
-                  <div class="col-xs-6 col-sm-3">
-                    {{ skill.label }}
-                  </div>
-                  <div class="col-xs-6 col-sm-9">
-                    <mat-icon
-                      class="star"
-                      *ngFor="let item of [].constructor(skill.rating)"
-                      >star</mat-icon
-                    >
-                    <mat-icon
-                      class="star-empty"
-                      *ngFor="let item of [].constructor(5 - skill.rating)"
-                      >star</mat-icon
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- .row -->
-          </div>
-          <!-- .sub-section -->
-
-          <div class="sub-section">
-            <div class="row">
-              <div class="col"><h2>Miscellaneous</h2></div>
-            </div>
-            <!-- .row -->
-            <div class="row">
-              <div
-                class="col-xs-12 col-sm-6 col-md-4"
-                *ngFor="let skill of miscSkills"
-              >
-                <div class="row">
-                  <div class="col-xs-6 col-sm-3">
-                    {{ skill.label }}
-                  </div>
-                  <div class="col-xs-6 col-sm-9">
-                    <mat-icon
-                      class="star"
-                      *ngFor="let item of [].constructor(skill.rating)"
-                      >star</mat-icon
-                    >
-                    <mat-icon
-                      class="star-empty"
-                      *ngFor="let item of [].constructor(5 - skill.rating)"
-                      >star</mat-icon
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- .row -->
-          </div>
-          <!-- .sub-section -->
+          <!-- .row -->
         </div>
-        <!-- .content -->
-      </mat-card>
-    </section>
-    <!-- #skills -->
+        <!-- .sub-section -->
 
-    <section id="projects" spyTarget="projects" wmAnimate="fadeInDown" aos>
-      <mat-card>
-        <app-section-header
-          [title]="'Projects'"
-          [titleBlurb]="'Web Apps I\'ve worked on'"
-        ></app-section-header>
-        <div class="content">Content</div>
-        <!-- .content -->
-      </mat-card>
-    </section>
-    <!-- #projects -->
+        <div class="sub-section">
+          <div class="row">
+            <div class="col"><h2>Miscellaneous</h2></div>
+          </div>
+          <!-- .row -->
+          <div class="row">
+            <div
+              class="col-xs-12 col-sm-6 col-md-4"
+              *ngFor="let skill of miscSkills"
+            >
+              <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                  {{ skill.label }}
+                </div>
+                <div class="col-xs-6 col-sm-9">
+                  <mat-icon
+                    class="star"
+                    *ngFor="let item of [].constructor(skill.rating)"
+                    >star</mat-icon
+                  >
+                  <mat-icon
+                    class="star-empty"
+                    *ngFor="let item of [].constructor(5 - skill.rating)"
+                    >star</mat-icon
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .row -->
+        </div>
+        <!-- .sub-section -->
+      </div>
+      <!-- .content -->
+    </mat-card>
+  </section>
+  <!-- #skills -->
 
-    <section id="career" spyTarget="career" wmAnimate="fadeInDown" aos>
-      <mat-card>
-        <app-section-header
-          [title]="'Career'"
-          [titleBlurb]="'Experience'"
-        ></app-section-header>
-        <div class="content">Content</div>
-        <!-- .content -->
-      </mat-card>
-    </section>
-    <!-- #career -->
+  <section id="projects" spyTarget="projects" wmAnimate="fadeInDown" aos>
+    <mat-card>
+      <app-section-header
+        [title]="'Projects'"
+        [titleBlurb]="'Web Apps I\'ve worked on'"
+      ></app-section-header>
+      <div class="content">Content</div>
+      <!-- .content -->
+    </mat-card>
+  </section>
+  <!-- #projects -->
 
-    <section id="education" spyTarget="education" wmAnimate="fadeInDown" aos>
-      <mat-card>
-        <app-section-header
-          [title]="'Education'"
-          [titleBlurb]="'Formal Training'"
-        ></app-section-header>
-        <div class="content">Content</div>
-        <!-- .content -->
-      </mat-card>
-    </section>
-    <!-- #education -->
-  </div>
-  <!-- .container -->
-</mat-drawer-container>
+  <section id="career" spyTarget="career" wmAnimate="fadeInDown" aos>
+    <mat-card>
+      <app-section-header
+        [title]="'Career'"
+        [titleBlurb]="'Experience'"
+      ></app-section-header>
+      <div class="content">Content</div>
+      <!-- .content -->
+    </mat-card>
+  </section>
+  <!-- #career -->
+
+  <section id="education" spyTarget="education" wmAnimate="fadeInDown" aos>
+    <mat-card>
+      <app-section-header
+        [title]="'Education'"
+        [titleBlurb]="'Formal Training'"
+      ></app-section-header>
+      <div class="content">Content</div>
+      <!-- .content -->
+    </mat-card>
+  </section>
+  <!-- #education -->
+</div>
+<!-- .container -->
