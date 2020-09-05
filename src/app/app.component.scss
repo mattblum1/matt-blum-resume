@@ -19,7 +19,7 @@ nav {
 
     li {
       align-items: center;
-      background-color: var(--off-black);
+      background-color: var(--dark-gray);
       color: var(--white);
       cursor: pointer;
       display: flex;
@@ -54,7 +54,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--off-black);
+  color: var(--dark-gray);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -79,7 +79,7 @@ nav {
 
   hr {
     border: 0;
-    border-top: 1px solid var(--off-black);
+    border-top: 1px solid var(--dark-gray);
     display: block;
     height: 1px;
     // margin: 1em 0;
@@ -123,7 +123,7 @@ nav {
 
   .down-wrapper {
     align-items: center;
-    background-color: var(--off-black);
+    background-color: var(--primary);
     bottom: 0;
     color: var(--white);
     cursor: pointer;

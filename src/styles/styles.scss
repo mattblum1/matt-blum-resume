@@ -7,9 +7,6 @@
 @import "./components/mat-cards";
 @import "./themes/resume-mat-theme";
 
-// @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap");
-// @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
 html,
 body {
   height: 100%;
@@ -58,6 +55,7 @@ mat-card {
     .title-blurb {
       background-color: var(--secondary);
       clear: both;
+      color: var(--white);
       float: left;
       font-size: 12px;
       letter-spacing: 1px;
@@ -74,7 +72,7 @@ $accent-line-height: 76px;
   font-size: 15px;
   line-height: 24px;
 
-  .side-title {
+  .side-accent {
     color: var(--white);
     font-size: 36px;
     line-height: 1;
@@ -83,7 +81,7 @@ $accent-line-height: 76px;
 
     a,
     span {
-      background-color: var(--off-black);
+      background-color: var(--dark-gray);
       color: var(--white);
       transition: background-color 0.2s;
     }
@@ -105,7 +103,7 @@ $accent-line-height: 76px;
       position: relative;
       padding: 20px;
 
-      .top-line {
+      .top-accent {
         background-color: transparent;
         border-top: 10px var(--primary) solid;
         height: calc(100% - 10px);
