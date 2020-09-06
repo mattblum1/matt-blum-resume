@@ -152,11 +152,16 @@ section {
     padding-bottom: 95px;
     padding-top: 98px;
   }
+
   .sub-section {
     margin-bottom: 40px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &.large-sub-section {
+      margin-bottom: 80px;
     }
 
     .sub-section-header {

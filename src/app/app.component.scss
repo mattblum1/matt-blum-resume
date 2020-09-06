@@ -134,6 +134,17 @@ nav.desktop {
   }
 }
 
+.screenshots {
+  display: flex;
+  justify-content: space-around;
+
+  .projects-thumbnail {
+    border: 1px solid var(--off-white);
+    height: 300px;
+    width: auto;
+  }
+}
+
 @-webkit-keyframes bounce {
   0% {
     transform: translateY(0);
