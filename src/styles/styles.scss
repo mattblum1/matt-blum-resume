@@ -1,5 +1,6 @@
 @import "~@angular/material/theming";
-@import "bootstrap-grid-only/bootstrap";
+// @import "bootstrap/scss/_grid.scss";
+@import "~bootstrap/dist/css/bootstrap-grid.min";
 
 @import "./base/colors";
 @import "./base/lib";
@@ -143,19 +144,36 @@ $accent-line-height: 76px;
   }
 }
 
-.sub-section-header {
-  display: flex;
-  justify-content: space-between;
-
-  h2 {
-    display: inline-block;
-    margin-bottom: 0;
+section {
+  &.header {
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 95px;
+    padding-top: 98px;
   }
+  .sub-section {
+    margin-bottom: 40px;
 
-  span {
-    font-size: 14px;
-    span::before {
-      content: " - ";
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .sub-section-header {
+      display: flex;
+      justify-content: space-between;
+
+      h2 {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+
+      span {
+        font-size: 14px;
+        span::before {
+          content: " - ";
+        }
+      }
     }
   }
 }
