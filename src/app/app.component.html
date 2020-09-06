@@ -11,13 +11,6 @@
 </nav>
 
 <mat-menu #menu="matMenu">
-  <!-- <button
-    mat-menu-item
-    (click)="scrollToId('profile', -68)"
-    [ngClass]="{ active: sectionInView === 'profile' }"
-  >
-    <span>Profile</span>
-  </button> -->
   <button
     mat-menu-item
     (click)="scrollToId('skills', -68)"
@@ -103,14 +96,6 @@
 
 <nav class="desktop" [ngClass]="{ fixed: isPastOneHundredViewHeight }">
   <ul>
-    <!-- <li
-      (click)="scrollToId('profile', -20)"
-      [ngClass]="{ active: sectionInView === 'profile' }"
-      wmAnimate="fadeInRight"
-      aos
-    >
-      Profile
-    </li> -->
     <li
       (click)="scrollToId('skills', -20)"
       [ngClass]="{ active: sectionInView === 'skills' }"
@@ -170,53 +155,6 @@
     </h1>
   </section>
   <!-- #header -->
-
-  <!-- <section
-    id="profile"
-    spyTarget="profile"
-    wmAnimate="fadeInDown"
-    aos
-    delay="500ms"
-  >
-    <mat-card> -->
-  <!-- <app-section-header
-        [title]="'Profile'"
-        [titleBlurb]="'About Me And My Passions'"
-      ></app-section-header>
-      <div class="content">
-        <div class="row">
-          <div class="col-md-4">
-            I'm a Front-End Developer and take pride in creating beautiful,
-            clean UI and UX. I write efficient, readable code and have a keen
-            eye for detail.
-          </div>
-          <div class="col-md-4 text-center">
-            <img
-              class="profile-avatar"
-              src="../assets/images/profile.webp"
-              alt="Matt Blum"
-            />
-          </div>
-          <div class="col-md-4">
-            <div class="detail">
-              <div>Name:</div>
-              <div>Matt Blum</div>
-            </div>
-            <div class="detail">
-              <div>Birthdate:</div>
-              <div>Februrary 6, 1986</div>
-            </div>
-            <div class="detail">
-              <div>Location:</div>
-              <div>Janesville, WI</div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-  <!-- .content -->
-  <!-- </mat-card>
-  </section> -->
-  <!-- #profile -->
 
   <section id="skills" spyTarget="skills" wmAnimate="fadeInDown" aos>
     <mat-card>
