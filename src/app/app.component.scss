@@ -11,7 +11,7 @@ nav.mobile.fixed {
 
 nav.mobile {
   mat-toolbar {
-    background-color: var(--primary);
+    background-color: transparent;
     color: var(--white);
     display: flex;
     height: 0;
@@ -133,29 +133,6 @@ nav.desktop {
     }
   }
 }
-
-// img.profile-avatar {
-//   border-radius: 50%;
-//   filter: grayscale(100%);
-//   // transition: filter 0.2s;
-
-//   // &:hover {
-//   //   filter: grayscale(0);
-//   //   transition: filter 0.3s;
-//   // }
-// }
-
-// .detail {
-//   margin-bottom: 20px;
-// }
-
-// .education-col {
-//   // margin-right: 40px;
-
-//   &:last-child {
-//     margin-right: 0;
-//   }
-// }
 
 @-webkit-keyframes bounce {
   0% {
