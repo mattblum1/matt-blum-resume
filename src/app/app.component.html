@@ -184,8 +184,34 @@
         [titleBlurb]="'About Me And My Passions'"
       ></app-section-header>
       <div class="content">
-        I'm a Front-End Developer and take pride in creating beautiful, clean UI
-        and UX. I write efficient, readable code and have a keen eye for detail.
+        <div class="row">
+          <div class="col-md-4">
+            I'm a Front-End Developer and take pride in creating beautiful,
+            clean UI and UX. I write efficient, readable code and have a keen
+            eye for detail.
+          </div>
+          <div class="col-md-4 text-center">
+            <img
+              class="profile-avatar"
+              src="../assets/images/profile.webp"
+              alt="Matt Blum"
+            />
+          </div>
+          <div class="col-md-4">
+            <div class="detail">
+              <div>Name:</div>
+              <div>Matt Blum</div>
+            </div>
+            <div class="detail">
+              <div>Birthdate:</div>
+              <div>Februrary 6, 1986</div>
+            </div>
+            <div class="detail">
+              <div>Location:</div>
+              <div>Janesville, WI</div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- .content -->
     </mat-card>
@@ -325,7 +351,11 @@
         <div class="sub-section">
           <div class="sub-section-header">
             <span
-              ><h2>Select Sires</h2>
+              ><h2>
+                <a href="http://www.selectsires.com" target="_blank"
+                  >Select Sires</a
+                >
+              </h2>
               <span>Remote</span>
             </span>
             <span>June 2017 to August 2020</span>
@@ -343,7 +373,11 @@
         <div class="sub-section">
           <div class="sub-section-header">
             <span
-              ><h2>Accelerated Genetics</h2>
+              ><h2>
+                <a href="https://www.accelgen.com" target="_blank"
+                  >Accelerated Genetics</a
+                >
+              </h2>
               <span>Remote</span>
             </span>
             <span>January 2015 to May 2017</span>
@@ -418,14 +452,11 @@
           </div>
           <!-- .sub-section-header -->
           <h4>Mobile Web Specialist, Nanodegree</h4>
-          <div>
-            Core curriculum:
-            <ul>
-              <li>Dynamic & Offline Capable Web Apps</li>
-              <li>Performant Web Apps</li>
-              <li>Web Accessibility</li>
-            </ul>
-          </div>
+          <ul>
+            <li>Dynamic & Offline Capable Web Apps</li>
+            <li>Performant Web Apps</li>
+            <li>Web Accessibility</li>
+          </ul>
         </div>
         <!-- .sub-section -->
         <div class="sub-section">
@@ -444,12 +475,9 @@
             Associate of Applied Science - IT-Web Analyst/Programmer
           </h4>
           <h4>GPA: 3.76/4.0</h4>
-          <div>
-            Core curriculum:
-            <ul>
-              <li *ngFor="let course of blackhawkCourses">{{ course }}</li>
-            </ul>
-          </div>
+          <ul>
+            <li *ngFor="let course of blackhawkCourses">{{ course }}</li>
+          </ul>
         </div>
         <!-- .sub-section -->
       </div>

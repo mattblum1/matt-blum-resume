@@ -113,14 +113,13 @@ nav.desktop {
     height: 48px;
     justify-content: center;
     position: absolute;
-    transition: background-color 0.3s;
+    // transition: background-color 0.3s;
     width: 100%;
 
-    &:hover {
-      background-color: var(--black);
-      color: var(--white);
-      transition: background-color 0.2s, color 0.2s;
-    }
+    // &:hover {
+    //   background-color: var(--black);
+    //   transition: background-color 0.2s, color 0.2s;
+    // }
 
     .down {
       align-items: baseline;
@@ -144,11 +143,6 @@ section {
     padding-top: 98px;
   }
 
-  // TODO: Remove after content has been supplied
-  mat-card {
-    min-height: 600px;
-  }
-
   .sub-section {
     margin-bottom: 40px;
 
@@ -156,6 +150,21 @@ section {
       margin-bottom: 0;
     }
   }
+}
+
+img.profile-avatar {
+  border-radius: 50%;
+  filter: grayscale(100%);
+  // transition: filter 0.2s;
+
+  // &:hover {
+  //   filter: grayscale(0);
+  //   transition: filter 0.3s;
+  // }
+}
+
+.detail {
+  margin-bottom: 20px;
 }
 
 @-webkit-keyframes bounce {
