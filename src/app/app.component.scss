@@ -134,38 +134,28 @@ nav.desktop {
   }
 }
 
-section {
-  &.header {
-    align-content: center;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 95px;
-    padding-top: 98px;
-  }
+// img.profile-avatar {
+//   border-radius: 50%;
+//   filter: grayscale(100%);
+//   // transition: filter 0.2s;
 
-  .sub-section {
-    margin-bottom: 40px;
+//   // &:hover {
+//   //   filter: grayscale(0);
+//   //   transition: filter 0.3s;
+//   // }
+// }
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
+// .detail {
+//   margin-bottom: 20px;
+// }
 
-img.profile-avatar {
-  border-radius: 50%;
-  filter: grayscale(100%);
-  // transition: filter 0.2s;
+// .education-col {
+//   // margin-right: 40px;
 
-  // &:hover {
-  //   filter: grayscale(0);
-  //   transition: filter 0.3s;
-  // }
-}
-
-.detail {
-  margin-bottom: 20px;
-}
+//   &:last-child {
+//     margin-right: 0;
+//   }
+// }
 
 @-webkit-keyframes bounce {
   0% {
