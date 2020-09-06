@@ -158,29 +158,6 @@ section {
   }
 }
 
-.career {
-  ul {
-    padding-left: 20px;
-  }
-
-  .career-header {
-    display: flex;
-    justify-content: space-between;
-
-    h2 {
-      display: inline-block;
-      margin-bottom: 0;
-    }
-
-    span {
-      font-size: 14px;
-      span::before {
-        content: " - ";
-      }
-    }
-  }
-}
-
 @-webkit-keyframes bounce {
   0% {
     transform: translateY(0);

@@ -64,9 +64,9 @@
 
     <hr wmAnimate="fadeIn" delay="250ms" />
 
-    <h3 class="description" wmAnimate="fadeInDown" delay="500ms">
+    <h4 class="description" wmAnimate="fadeInDown" delay="500ms">
       Front-End Developer
-    </h3>
+    </h4>
     <!-- .description -->
 
     <div class="cta">
@@ -315,13 +315,7 @@
   </section>
   <!-- #projects -->
 
-  <section
-    id="career"
-    class="career"
-    spyTarget="career"
-    wmAnimate="fadeInDown"
-    aos
-  >
+  <section id="career" spyTarget="career" wmAnimate="fadeInDown" aos>
     <mat-card>
       <app-section-header
         [title]="'Career'"
@@ -329,15 +323,15 @@
       ></app-section-header>
       <div class="content">
         <div class="sub-section">
-          <div class="career-header">
+          <div class="sub-section-header">
             <span
               ><h2>Select Sires</h2>
               <span>Remote</span>
             </span>
             <span>June 2017 to August 2020</span>
           </div>
-          <!-- career-header -->
-          <h3>Front-end Developer</h3>
+          <!-- sub-section-header -->
+          <h4>Front-end Developer</h4>
           <div>
             Front-end Developer where I created and maintained various Angular
             applications using TypeScript, JS, ES6, NgRx, Redux, Material
@@ -347,15 +341,15 @@
         </div>
         <!-- .sub-section -->
         <div class="sub-section">
-          <div class="career-header">
+          <div class="sub-section-header">
             <span
               ><h2>Accelerated Genetics</h2>
               <span>Remote</span>
             </span>
             <span>January 2015 to May 2017</span>
           </div>
-          <!-- career-header -->
-          <h3>Full-Stack Web Developer</h3>
+          <!-- sub-section-header -->
+          <h4>Full-Stack Web Developer</h4>
           <div>
             <ul>
               <li>
@@ -412,7 +406,53 @@
         [title]="'Education'"
         [titleBlurb]="'Formal Training'"
       ></app-section-header>
-      <div class="content">Content</div>
+      <div class="content">
+        <div class="sub-section">
+          <div class="sub-section-header">
+            <span
+              ><h2>
+                <a href="https://www.udacity.com" target="_blank">Udacity</a>
+              </h2></span
+            >
+            <span>June 2019 to October 2019</span>
+          </div>
+          <!-- .sub-section-header -->
+          <h4>Mobile Web Specialist, Nanodegree</h4>
+          <div>
+            Core curriculum:
+            <ul>
+              <li>Dynamic & Offline Capable Web Apps</li>
+              <li>Performant Web Apps</li>
+              <li>Web Accessibility</li>
+            </ul>
+          </div>
+        </div>
+        <!-- .sub-section -->
+        <div class="sub-section">
+          <div class="sub-section-header">
+            <span
+              ><h2>
+                <a href="https://www.blackhawk.edu" target="_blank"
+                  >Blackhawk Technical College</a
+                >
+              </h2></span
+            >
+            <span>Graduated May 2014</span>
+          </div>
+          <!-- .sub-section-header -->
+          <h4 class="no-margin">
+            Associate of Applied Science - IT-Web Analyst/Programmer
+          </h4>
+          <h4>GPA: 3.76/4.0</h4>
+          <div>
+            Core curriculum:
+            <ul>
+              <li *ngFor="let course of blackhawkCourses">{{ course }}</li>
+            </ul>
+          </div>
+        </div>
+        <!-- .sub-section -->
+      </div>
       <!-- .content -->
     </mat-card>
   </section>

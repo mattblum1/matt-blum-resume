@@ -22,15 +22,25 @@ body {
 a {
   color: var(--primary);
   text-decoration: none;
-  // transition: background-color 0.3s, color 0.3s;
 
   &:hover,
   &:active,
   &:focus {
-    // background-color: var(--primary);
-    // color: var(--white);
     text-decoration: underline;
-    // transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 20px;
+
+  li:before {
+    content: "\2022";
+    color: var(--primary);
+    display: inline-block;
+    font-weight: bold;
+    width: 1em;
+    margin-left: -1em;
   }
 }
 
@@ -128,6 +138,23 @@ $accent-line-height: 76px;
         top: 0;
         width: $accent-line-height;
       }
+    }
+  }
+}
+
+.sub-section-header {
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  span {
+    font-size: 14px;
+    span::before {
+      content: " - ";
     }
   }
 }

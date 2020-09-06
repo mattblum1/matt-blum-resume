@@ -38,6 +38,17 @@ export class AppComponent implements AfterViewInit {
     { label: 'PrimeNG', rating: 4 },
   ];
 
+  blackhawkCourses: string[] = [
+    'JavaScript Programming',
+    'Website Development – XHTML/CSS',
+    'ASP.NET Programming',
+    'Visual Basic .NET Programming',
+    'C Programming',
+    'Beginning & Advanced PHP Programming',
+    'Beginning & Advanced Java Programming',
+    'Relational Database Dev. (MySQL)',
+  ];
+
   constructor(private spyService: ScrollSpyService) {
     this.frontEndSkills = this.frontEndSkills.sort(
       (a, b) => b.rating - a.rating

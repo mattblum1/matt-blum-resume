@@ -2,6 +2,16 @@
   clear: both;
 }
 
+.mat-typography .no-margin,
+.no-margin {
+  margin: 0 !important;
+}
+
+.mat-typography .no-padding,
+.no-padding {
+  padding: 0 !important;
+}
+
 .text-center {
   text-align: center !important;
 }
