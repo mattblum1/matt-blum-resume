@@ -2,14 +2,19 @@
   clear: both;
 }
 
-.mat-typography .no-margin,
-.no-margin {
-  margin: 0 !important;
+.justify-content-space-between {
+  display: flex;
+  justify-content: space-between;
 }
 
-.mat-typography .no-padding,
-.no-padding {
-  padding: 0 !important;
+.mat-typography {
+  .no-margin {
+    margin: 0 !important;
+  }
+
+  .no-padding {
+    padding: 0 !important;
+  }
 }
 
 .text-center {
