@@ -8,6 +8,8 @@ import { ScrollSpyService } from 'ng-spy';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
+  SECTION_Y_OFFSET: number = -20;
+
   isPastOneHundredViewHeight: boolean = false;
   sectionInView: string = '';
 

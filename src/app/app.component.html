@@ -13,35 +13,35 @@
 <mat-menu #menu="matMenu">
   <button
     mat-menu-item
-    (click)="scrollToId('skills', -68)"
+    (click)="scrollToId('skills', SECTION_Y_OFFSET)"
     [ngClass]="{ active: sectionInView === 'skills' }"
   >
     <span>Skills</span>
   </button>
   <button
     mat-menu-item
-    (click)="scrollToId('projects', -68)"
+    (click)="scrollToId('projects', SECTION_Y_OFFSET)"
     [ngClass]="{ active: sectionInView === 'projects' }"
   >
     <span>Projects</span>
   </button>
   <button
     mat-menu-item
-    (click)="scrollToId('career', -68)"
+    (click)="scrollToId('career', SECTION_Y_OFFSET)"
     [ngClass]="{ active: sectionInView === 'career' }"
   >
     <span>Career</span>
   </button>
   <button
     mat-menu-item
-    (click)="scrollToId('education', -68)"
+    (click)="scrollToId('education', SECTION_Y_OFFSET)"
     [ngClass]="{ active: sectionInView === 'education' }"
   >
     <span>Education</span>
   </button>
   <button
     mat-menu-item
-    (click)="scrollToId('landing', -68)"
+    (click)="scrollToId('landing', SECTION_Y_OFFSET)"
     class="text-center"
   >
     <mat-icon aria-hidden="false" aria-label="Up Arrow"
@@ -97,7 +97,7 @@
 <nav class="desktop" [ngClass]="{ fixed: isPastOneHundredViewHeight }">
   <ul>
     <li
-      (click)="scrollToId('skills', -20)"
+      (click)="scrollToId('skills', SECTION_Y_OFFSET)"
       [ngClass]="{ active: sectionInView === 'skills' }"
       wmAnimate="fadeInRight"
       aos
@@ -106,7 +106,7 @@
       Skills
     </li>
     <li
-      (click)="scrollToId('projects', -20)"
+      (click)="scrollToId('projects', SECTION_Y_OFFSET)"
       [ngClass]="{ active: sectionInView === 'projects' }"
       wmAnimate="fadeInRight"
       aos
@@ -115,7 +115,7 @@
       Projects
     </li>
     <li
-      (click)="scrollToId('career', -20)"
+      (click)="scrollToId('career', SECTION_Y_OFFSET)"
       [ngClass]="{ active: sectionInView === 'career' }"
       wmAnimate="fadeInRight"
       aos
@@ -124,7 +124,7 @@
       Career
     </li>
     <li
-      (click)="scrollToId('education', -20)"
+      (click)="scrollToId('education', SECTION_Y_OFFSET)"
       [ngClass]="{ active: sectionInView === 'education' }"
       wmAnimate="fadeInRight"
       aos
@@ -133,7 +133,7 @@
       Education
     </li>
     <li
-      (click)="scrollToId('landing', -20)"
+      (click)="scrollToId('landing', SECTION_Y_OFFSET)"
       wmAnimate="fadeInRight"
       aos
       delay="1250ms"
