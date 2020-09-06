@@ -1,13 +1,12 @@
 <nav class="mobile" [ngClass]="{ fixed: isPastOneHundredViewHeight }">
-  <mat-toolbar>
-    <button
-      mat-button
-      [matMenuTriggerFor]="menu"
-      aria-label="Example icon-button with a menu"
-    >
-      <mat-icon>menu</mat-icon>
-    </button>
-  </mat-toolbar>
+  <button
+    mat-flat-button
+    color="primary"
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
 </nav>
 
 <mat-menu #menu="matMenu">
@@ -308,22 +307,33 @@
               first strategy.
             </div>
             <!-- .col -->
-            <div class="col-sm-12 col-md-8 col-lg-5 screenshot">
-              <img
-                src="../assets/images/screenshots/bull-search-web.webp"
-                alt="Bull Search Web - Desktop"
-                class="projects-thumbnail"
-              />
-            </div>
-            <!-- .col -->
-            <div class="col-sm-12 col-md-4 col-lg-3 screenshot">
-              <img
-                src="../assets/images/screenshots/bull-search-web-mobile.webp"
-                alt="Bull Search Web - Mobile"
-                class="projects-thumbnail"
-              />
-            </div>
-            <!-- .col -->
+            <ng-template
+              ngFor
+              let-image
+              [ngForOf]="bullSearchWebAlbum"
+              let-i="index"
+            >
+              <div
+                class="col-sm-12 col-md-8 col-lg-5 screenshot"
+                *ngIf="i === 0"
+              >
+                <img
+                  [src]="image.thumb"
+                  (click)="openAlbum(bullSearchWebAlbum, i)"
+                />
+              </div>
+              <!-- .col -->
+              <div
+                class="col-sm-12 col-md-4 col-lg-3 screenshot"
+                *ngIf="i === 1"
+              >
+                <img
+                  [src]="image.thumb"
+                  (click)="openAlbum(bullSearchWebAlbum, i)"
+                />
+              </div>
+              <!-- .col -->
+            </ng-template>
           </div>
           <!-- .row -->
         </div>
@@ -342,22 +352,33 @@
               SQL-injection and improved query performance.
             </div>
             <!-- .col -->
-            <div class="col-sm-12 col-md-8 col-lg-5 screenshot">
-              <img
-                src="../assets/images/screenshots/accelerated-genetics.webp"
-                alt="Accelerated Genetics - Desktop"
-                class="projects-thumbnail"
-              />
-            </div>
-            <!-- .col -->
-            <div class="col-sm-12 col-md-4 col-lg-3 screenshot">
-              <img
-                src="../assets/images/screenshots/accelerated-genetics-mobile.webp"
-                alt="Accelerated Genetics - Desktop"
-                class="projects-thumbnail"
-              />
-            </div>
-            <!-- .col -->
+            <ng-template
+              ngFor
+              let-image
+              [ngForOf]="acceleratedGeneticsAlbum"
+              let-i="index"
+            >
+              <div
+                class="col-sm-12 col-md-8 col-lg-5 screenshot"
+                *ngIf="i === 0"
+              >
+                <img
+                  [src]="image.thumb"
+                  (click)="openAlbum(acceleratedGeneticsAlbum, i)"
+                />
+              </div>
+              <!-- .col -->
+              <div
+                class="col-sm-12 col-md-4 col-lg-3 screenshot"
+                *ngIf="i === 1"
+              >
+                <img
+                  [src]="image.thumb"
+                  (click)="openAlbum(acceleratedGeneticsAlbum, i)"
+                />
+              </div>
+              <!-- .col -->
+            </ng-template>
           </div>
           <!-- .row -->
         </div>
@@ -372,22 +393,33 @@
               and UX, and setup the Redux state management.
             </div>
             <!-- .col -->
-            <div class="col-sm-12 col-md-8 col-lg-5 screenshot">
-              <img
-                src="../assets/images/screenshots/ag-search.webp"
-                alt="Sire Search - Desktop"
-                class="projects-thumbnail"
-              />
-            </div>
-            <!-- .col -->
-            <div class="col-sm-12 col-md-4 col-lg-3 screenshot">
-              <img
-                src="../assets/images/screenshots/ag-search-mobile.webp"
-                alt="Sire Search - Mobile"
-                class="projects-thumbnail"
-              />
-            </div>
-            <!-- .col -->
+            <ng-template
+              ngFor
+              let-image
+              [ngForOf]="sireSearchAlbum"
+              let-i="index"
+            >
+              <div
+                class="col-sm-12 col-md-8 col-lg-5 screenshot"
+                *ngIf="i === 0"
+              >
+                <img
+                  [src]="image.thumb"
+                  (click)="openAlbum(sireSearchAlbum, i)"
+                />
+              </div>
+              <!-- .col -->
+              <div
+                class="col-sm-12 col-md-4 col-lg-3 screenshot"
+                *ngIf="i === 1"
+              >
+                <img
+                  [src]="image.thumb"
+                  (click)="openAlbum(sireSearchAlbum, i)"
+                />
+              </div>
+              <!-- .col -->
+            </ng-template>
           </div>
           <!-- .row -->
         </div>
@@ -404,13 +436,20 @@
               WindRiver API for credit card processing.
             </div>
             <!-- .col -->
-            <div class="col-md-12 col-lg-6 screenshot">
-              <img
-                src="../assets/images/screenshots/shop.webp"
-                alt="Shop, Accelerated Genetics - Desktop"
-                class="projects-thumbnail"
-              />
-            </div>
+            <ng-template
+              ngFor
+              let-image
+              [ngForOf]="shopSearchAlbum"
+              let-i="index"
+            >
+              <div class="col-md-12 col-lg-6 screenshot" *ngIf="i === 0">
+                <img
+                  [src]="image.thumb"
+                  (click)="openAlbum(shopSearchAlbum, i)"
+                />
+              </div>
+              <!-- .col -->
+            </ng-template>
             <!-- .col -->
           </div>
           <!-- .row -->
@@ -425,14 +464,20 @@
           <div class="row">
             <div class="col-md-12 col-lg-6">DSS Description</div>
             <!-- .col -->
-            <div class="col-md-12 col-lg-6 screenshot">
-              <img
-                src="../assets/images/screenshots/dairy-sire-selection.webp"
-                alt="Dairy Sire Selection - Desktop"
-                class="projects-thumbnail"
-              />
-            </div>
-            <!-- .col -->
+            <ng-template
+              ngFor
+              let-image
+              [ngForOf]="dairySireSearchAlbum"
+              let-i="index"
+            >
+              <div class="col-md-12 col-lg-6 screenshot" *ngIf="i === 0">
+                <img
+                  [src]="image.thumb"
+                  (click)="openAlbum(dairySireSearchAlbum, i)"
+                />
+              </div>
+              <!-- .col -->
+            </ng-template>
           </div>
           <!-- .row -->
         </div>

@@ -1,4 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { IAlbum, Lightbox } from 'ngx-lightbox';
 
 import { ScrollSpyService } from 'ng-spy';
 
@@ -51,7 +52,65 @@ export class AppComponent implements AfterViewInit {
     'Relational Database Dev. (MySQL)',
   ];
 
-  constructor(private spyService: ScrollSpyService) {
+  bullSearchWebAlbum: IAlbum[] = [
+    {
+      src: '../assets/images/screenshots/bull-search-web.webp',
+      caption: 'Bull Search Web - Desktop',
+      thumb: '../assets/images/screenshots/bull-search-web.webp',
+    },
+    {
+      src: '../assets/images/screenshots/bull-search-web-mobile.webp',
+      caption: 'Bull Search Web - Mobile',
+      thumb: '../assets/images/screenshots/bull-search-web-mobile.webp',
+    },
+  ];
+
+  acceleratedGeneticsAlbum: IAlbum[] = [
+    {
+      src: '../assets/images/screenshots/accelerated-genetics.webp',
+      caption: 'Accelerated Genetics - Desktop',
+      thumb: '../assets/images/screenshots/accelerated-genetics.webp',
+    },
+    {
+      src: '../assets/images/screenshots/accelerated-genetics-mobile.webp',
+      caption: 'Accelerated Genetics - Mobile',
+      thumb: '../assets/images/screenshots/accelerated-genetics-mobile.webp',
+    },
+  ];
+
+  sireSearchAlbum: IAlbum[] = [
+    {
+      src: '../assets/images/screenshots/ag-search.webp',
+      caption: 'Sire Search - Desktop',
+      thumb: '../assets/images/screenshots/ag-search.webp',
+    },
+    {
+      src: '../assets/images/screenshots/ag-search-mobile.webp',
+      caption: 'Sire Search - Mobile',
+      thumb: '../assets/images/screenshots/ag-search-mobile.webp',
+    },
+  ];
+
+  shopSearchAlbum: IAlbum[] = [
+    {
+      src: '../assets/images/screenshots/shop.webp',
+      caption: 'Shop - Desktop',
+      thumb: '../assets/images/screenshots/shop.webp',
+    },
+  ];
+
+  dairySireSearchAlbum: IAlbum[] = [
+    {
+      src: '../assets/images/screenshots/dairy-sire-selection.webp',
+      caption: 'Shop - Desktop',
+      thumb: '../assets/images/screenshots/dairy-sire-selection.webp',
+    },
+  ];
+
+  constructor(
+    private spyService: ScrollSpyService,
+    private lightbox: Lightbox
+  ) {
     this.frontEndSkills = this.frontEndSkills.sort(
       (a, b) => b.rating - a.rating
     );
@@ -75,10 +134,13 @@ export class AppComponent implements AfterViewInit {
     });
   }
 
-  // scrollToId(selector: string, offset = 0) {
-  //   const el = document.getElementById(selector);
-  //   el.scrollIntoView({ behavior: 'smooth' });
-  // }
+  openAlbum(album: IAlbum[], index: number): void {
+    this.lightbox.open(album, index);
+  }
+
+  closeAlbum(): void {
+    this.lightbox.close();
+  }
 
   scrollToId(selector: string, yOffset: number = 0) {
     const el = document.getElementById(selector);

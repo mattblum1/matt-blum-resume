@@ -1,7 +1,10 @@
 button,
 a {
+  &.mat-icon-button,
+  &.mat-flat-button,
   &.mat-raised-button {
     border-radius: 0;
     text-transform: uppercase;
+    text-decoration: none !important;
   }
 }
