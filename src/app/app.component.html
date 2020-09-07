@@ -38,6 +38,9 @@
   >
     <span>Education</span>
   </button>
+  <button mat-menu-item>
+    <a href="mailto:matt.blum@live.com">Contact</a>
+  </button>
   <button
     mat-menu-item
     (click)="scrollToId('landing', SECTION_Y_OFFSET)"
@@ -64,14 +67,19 @@
     <div class="cta">
       <div class="button-wrapper" wmAnimate="fadeInDown" delay="750ms">
         <a href="mailto:matt.blum@live.com" mat-raised-button color="primary">
-          <mat-icon>email</mat-icon>Contact Me
+          <mat-icon>email</mat-icon>Contact
         </a>
       </div>
       <div class="button-wrapper" wmAnimate="fadeInDown" delay="1000ms">
-        <button mat-raised-button color="primary">
+        <!-- <button
+          mat-raised-button
+          color="primary"
+          (click)="downloadPdfVersion()"
+        >
           <mat-icon>cloud_download</mat-icon>PDF Version
-        </button>
+        </button> -->
       </div>
+      <!-- .button-wrapper -->
     </div>
     <!-- .cta -->
   </div>
@@ -131,11 +139,14 @@
     >
       Education
     </li>
+    <li wmAnimate="fadeInRight" aos delay="1250ms">
+      <a href="mailto:matt.blum@live.com">Contact</a>
+    </li>
     <li
       (click)="scrollToId('landing', SECTION_Y_OFFSET)"
       wmAnimate="fadeInRight"
       aos
-      delay="1250ms"
+      delay="1500ms"
     >
       <mat-icon aria-hidden="false" aria-label="Up Arrow"
         >keyboard_arrow_up</mat-icon
@@ -144,7 +155,7 @@
   </ul>
 </nav>
 
-<div class="container">
+<div id="pdf-content" class="container">
   <section id="header" class="header" spyTarget="header">
     <h1 class="side-accent" wmAnimate="fadeInDown" aos>
       <a href="#">Matt Blum</a>

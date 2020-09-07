@@ -17,6 +17,16 @@
           background-color: var(--primary);
         }
 
+        a {
+          color: var(--white);
+
+          &:hover,
+          &:active,
+          &:focus {
+            text-decoration: none;
+          }
+        }
+
         mat-icon {
           color: var(--white);
         }

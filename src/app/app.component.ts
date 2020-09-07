@@ -143,7 +143,9 @@ export class AppComponent implements AfterViewInit {
     this.lightbox.close();
   }
 
-  scrollToId(selector: string, yOffset: number = 0) {
+  downloadPdfVersion(): void {}
+
+  scrollToId(selector: string, yOffset: number = 0): void {
     const el = document.getElementById(selector);
     const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
