@@ -64,6 +64,10 @@
           background-color: var(--primary);
         }
 
+        &.border-top {
+          border-top: 1px solid var(--light-gray);
+        }
+
         a {
           align-items: center;
           display: flex;
