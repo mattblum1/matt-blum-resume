@@ -21,8 +21,8 @@ nav.desktop {
 
 .landing {
   align-items: center;
-  background: url("../assets/images/landing/subtle.jpg") no-repeat center center
-    fixed;
+  background-image: url("../assets/images/landing/subtle.jpg");
+  -webkit-background-image: url("../assets/images/landing/subtle.jpg");
   // background: linear-gradient(rgba(34, 179, 235, 0.1), rgba(85, 197, 240, 0.1)),
   //   url("../assets/images/landing/subtle.jpg");
   // url("../assets/images/landing/subtle.webp");
