@@ -94,6 +94,41 @@ mat-card {
   }
 }
 
+section {
+  &.header {
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 95px;
+    padding-top: 98px;
+  }
+
+  .subsection {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .subsection-header {
+      display: flex;
+      justify-content: space-between;
+
+      h2 {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+
+      span {
+        font-size: 14px;
+        span::before {
+          content: " - ";
+        }
+      }
+    }
+  }
+}
+
 $accent-line-height: 76px;
 .mat-typography {
   font-size: 15px;
@@ -143,37 +178,12 @@ $accent-line-height: 76px;
   }
 }
 
-section {
-  &.header {
-    align-content: center;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 95px;
-    padding-top: 98px;
-  }
+.webp .landing {
+  background: linear-gradient(rgba(34, 179, 235, 0.1), rgba(85, 197, 240, 0.1)),
+    url("../assets/images/cover/subtle.webp");
+}
 
-  .subsection {
-    margin-bottom: 40px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    .subsection-header {
-      display: flex;
-      justify-content: space-between;
-
-      h2 {
-        display: inline-block;
-        margin-bottom: 0;
-      }
-
-      span {
-        font-size: 14px;
-        span::before {
-          content: " - ";
-        }
-      }
-    }
-  }
+.no-webp .landing {
+  background: linear-gradient(rgba(34, 179, 235, 0.1), rgba(85, 197, 240, 0.1)),
+    url("../assets/images/cover/subtle.jpg");
 }
