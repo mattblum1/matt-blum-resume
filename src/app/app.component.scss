@@ -24,10 +24,11 @@ nav.desktop {
   background-image: url("../assets/images/landing/subtle.webp");
   background-size: cover;
   color: var(--dark-gray);
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  // justify-content: center;
+  max-height: 100vh;
+  justify-content: center;
   margin: 0;
   text-align: center;
 
