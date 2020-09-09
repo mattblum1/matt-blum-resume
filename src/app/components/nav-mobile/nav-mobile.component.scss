@@ -1,3 +1,5 @@
+@import "../../../styles/base/vars";
+
 nav.mobile.fixed {
   button {
     top: 16px;
@@ -12,5 +14,11 @@ nav.mobile {
     right: 16px;
     transition: top 0.3s;
     z-index: 10;
+  }
+}
+
+@media (min-width: $xxxl) {
+  nav.mobile {
+    display: none;
   }
 }

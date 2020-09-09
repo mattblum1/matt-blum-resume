@@ -1,1 +1,54 @@
-<p>nav-desktop works!</p>
+<nav class="desktop" [ngClass]="{ fixed: isPastOneHundredViewHeight }">
+  <ul>
+    <li
+      (click)="utilityService.scrollToId('skills', SECTION_Y_OFFSET)"
+      [ngClass]="{ active: sectionInView === 'skills' }"
+      wmAnimate="fadeInRight"
+      aos
+      delay="250ms"
+    >
+      Skills
+    </li>
+    <li
+      (click)="utilityService.scrollToId('projects', SECTION_Y_OFFSET)"
+      [ngClass]="{ active: sectionInView === 'projects' }"
+      wmAnimate="fadeInRight"
+      aos
+      delay="500ms"
+    >
+      Projects
+    </li>
+    <li
+      (click)="utilityService.scrollToId('career', SECTION_Y_OFFSET)"
+      [ngClass]="{ active: sectionInView === 'career' }"
+      wmAnimate="fadeInRight"
+      aos
+      delay="750ms"
+    >
+      Career
+    </li>
+    <li
+      (click)="utilityService.scrollToId('education', SECTION_Y_OFFSET)"
+      [ngClass]="{ active: sectionInView === 'education' }"
+      wmAnimate="fadeInRight"
+      aos
+      delay="1000ms"
+    >
+      Education
+    </li>
+    <li class="border-top" wmAnimate="fadeInRight" aos delay="1250ms">
+      <a href="mailto:matt.blum@live.com">Contact</a>
+    </li>
+    <li
+      class="border-top"
+      (click)="utilityService.scrollToId('landing', SECTION_Y_OFFSET)"
+      wmAnimate="fadeInRight"
+      aos
+      delay="1500ms"
+    >
+      <mat-icon aria-hidden="false" aria-label="Up Arrow"
+        >keyboard_arrow_up</mat-icon
+      >
+    </li>
+  </ul>
+</nav>

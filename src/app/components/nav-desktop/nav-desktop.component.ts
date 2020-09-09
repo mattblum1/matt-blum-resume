@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { SECTION_Y_OFFSET } from 'src/consts';
+import { UtilityService } from 'src/app/services';
 
 @Component({
   selector: 'app-nav-desktop',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-desktop.component.scss'],
 })
 export class NavDesktopComponent {
-  constructor() {}
+  @Input() isPastOneHundredViewHeight;
+  @Input() sectionInView;
+
+  readonly SECTION_Y_OFFSET = SECTION_Y_OFFSET;
+
+  constructor(public utilityService: UtilityService) {}
 }
