@@ -2,6 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { IAlbum, Lightbox } from 'ngx-lightbox';
 
 import { ScrollSpyService } from 'ng-spy';
+import { Skill } from '../models';
 
 @Component({
   selector: 'app-root',
@@ -188,9 +189,4 @@ export class AppComponent implements AfterViewInit {
       thumb: this.replaceAll(a.thumb, this.WEBP, this.JPG),
     }));
   }
-}
-
-interface Skill {
-  label: string;
-  rating: number;
 }
