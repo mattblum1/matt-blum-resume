@@ -1,0 +1,53 @@
+<nav class="mobile" [ngClass]="{ fixed: isPastOneHundredViewHeight }">
+  <button
+    mat-flat-button
+    color="primary"
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+</nav>
+
+<mat-menu #menu="matMenu">
+  <button
+    mat-menu-item
+    (click)="utilityService.scrollToId('skills', SECTION_Y_OFFSET)"
+    [ngClass]="{ active: sectionInView === 'skills' }"
+  >
+    <span>Skills</span>
+  </button>
+  <button
+    mat-menu-item
+    (click)="utilityService.scrollToId('projects', SECTION_Y_OFFSET)"
+    [ngClass]="{ active: sectionInView === 'projects' }"
+  >
+    <span>Projects</span>
+  </button>
+  <button
+    mat-menu-item
+    (click)="utilityService.scrollToId('career', SECTION_Y_OFFSET)"
+    [ngClass]="{ active: sectionInView === 'career' }"
+  >
+    <span>Career</span>
+  </button>
+  <button
+    mat-menu-item
+    (click)="utilityService.scrollToId('education', SECTION_Y_OFFSET)"
+    [ngClass]="{ active: sectionInView === 'education' }"
+  >
+    <span>Education</span>
+  </button>
+  <button mat-menu-item>
+    <a href="mailto:matt.blum@live.com">Contact</a>
+  </button>
+  <button
+    mat-menu-item
+    (click)="utilityService.scrollToId('landing', SECTION_Y_OFFSET)"
+    class="text-center"
+  >
+    <mat-icon aria-hidden="false" aria-label="Up Arrow"
+      >keyboard_arrow_up</mat-icon
+    >
+  </button>
+</mat-menu>

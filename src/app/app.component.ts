@@ -18,6 +18,7 @@ import { IAlbum, Lightbox } from 'ngx-lightbox';
 import { MOBILE_WEB_SPECIALIST_COURSES } from 'src/consts/courses';
 import { ScrollSpyService } from 'ng-spy';
 import { Skill } from '../models';
+import { UtilityService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -48,7 +49,8 @@ export class AppComponent implements AfterViewInit {
 
   constructor(
     private spyService: ScrollSpyService,
-    private lightbox: Lightbox
+    private lightbox: Lightbox,
+    public utilityService: UtilityService
   ) {
     this.frontEndSkills = this.sortSkillsByRating(this.frontEndSkills);
     this.librarySkills = this.sortSkillsByRating(this.librarySkills);
@@ -88,13 +90,6 @@ export class AppComponent implements AfterViewInit {
 
   replaceAll(str: string, find: string, replace: string) {
     return str.replace(new RegExp(find, 'g'), replace);
-  }
-
-  scrollToId(selector: string, yOffset: number = 0): void {
-    const el = document.getElementById(selector);
-    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-    window.scrollTo({ top: y, behavior: 'smooth' });
   }
 
   setupSpyService(): void {
