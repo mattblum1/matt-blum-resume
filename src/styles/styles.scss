@@ -181,3 +181,9 @@ $accent-line-height: 76px;
 .no-webp .landing {
   background-image: url("../assets/images/landing/subtle.jpg") !important;
 }
+
+@supports (-webkit-touch-callout: none) {
+  .landing {
+    height: -webkit-fill-available !important;
+  }
+}
