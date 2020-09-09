@@ -6,8 +6,9 @@ nav.mobile.fixed {
 
 nav.mobile {
   button {
+    height: 48px;
     position: fixed;
-    top: -36px;
+    top: -48px;
     right: 16px;
     transition: top 0.3s;
     z-index: 10;
