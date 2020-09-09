@@ -674,9 +674,9 @@
               </div>
               <h4>Mobile Web Specialist, Nanodegree</h4>
               <ul>
-                <li>Dynamic & Offline Capable Web Apps</li>
-                <li>Performant Web Apps</li>
-                <li>Web Accessibility</li>
+                <li *ngFor="let course of mobileWebSpecialistCourses">
+                  {{ course }}
+                </li>
               </ul>
             </div>
           </div>

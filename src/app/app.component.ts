@@ -1,6 +1,21 @@
+import {
+  ACCELERATED_GENETICS_ALBUM,
+  BLACKHAWK_COURSES,
+  BULL_SEARCH_WEB_ALBUM,
+  DAIRY_SIRE_SEARCH_ALBUM,
+  FRONT_END_SKILLS,
+  JPG,
+  LIBRARY_SKILLS,
+  MISC_SKILLS,
+  SECTION_Y_OFFSET,
+  SHOP_SEARCH_ALBUM,
+  SIRE_SEARCH_ALBUM,
+  WEBP,
+} from '../consts';
 import { AfterViewInit, Component } from '@angular/core';
 import { IAlbum, Lightbox } from 'ngx-lightbox';
 
+import { MOBILE_WEB_SPECIALIST_COURSES } from 'src/consts/courses';
 import { ScrollSpyService } from 'ng-spy';
 import { Skill } from '../models';
 
@@ -10,109 +25,26 @@ import { Skill } from '../models';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
-  JPG: string = 'jpg';
-  WEBP: string = 'webp';
-  SECTION_Y_OFFSET: number = -16;
+  readonly SECTION_Y_OFFSET = SECTION_Y_OFFSET;
 
   isPastOneHundredViewHeight: boolean = false;
   sectionInView: string = '';
 
-  frontEndSkills: Skill[] = [
-    { label: 'Angular', rating: 4 },
-    { label: 'TypeScript', rating: 4 },
-    { label: 'JavaScript', rating: 4 },
-    { label: 'NgRx', rating: 4 },
-    { label: 'Redux', rating: 4 },
-    { label: 'HTML5', rating: 4 },
-    { label: 'SCSS/CSS3', rating: 4 },
-    { label: 'SEO', rating: 4 },
-    { label: 'Responsive Design', rating: 4 },
-    // { label: 'React', rating: 1 },
-    // { label: 'PHP', rating: 1 },
-  ];
+  // Skills
+  frontEndSkills: Skill[] = FRONT_END_SKILLS;
+  miscSkills: Skill[] = MISC_SKILLS;
+  librarySkills: Skill[] = LIBRARY_SKILLS;
 
-  miscSkills: Skill[] = [
-    { label: 'C#', rating: 4 },
-    { label: 'ASP.NET', rating: 4 },
-    { label: 'OOP', rating: 4 },
-    { label: 'SQL', rating: 4 },
-  ];
+  // Courses
+  blackhawkCourses: string[] = BLACKHAWK_COURSES;
+  mobileWebSpecialistCourses: string[] = MOBILE_WEB_SPECIALIST_COURSES;
 
-  librarySkills: Skill[] = [
-    { label: 'Material', rating: 4 },
-    { label: 'Bootstrap', rating: 4 },
-    { label: 'PrimeNG', rating: 4 },
-  ];
-
-  blackhawkCourses: string[] = [
-    'JavaScript Programming',
-    'Website Development – XHTML/CSS',
-    'ASP.NET Programming',
-    'Visual Basic .NET Programming',
-    'C Programming',
-    'Beginning & Advanced PHP Programming',
-    'Beginning & Advanced Java Programming',
-    'Relational Database Dev. (MySQL)',
-  ];
-
-  bullSearchWebAlbum: IAlbum[] = [
-    {
-      src: '../assets/images/screenshots/webp/bull-search-web.webp',
-      caption: 'Bull Search Web - Desktop',
-      thumb: '../assets/images/screenshots/webp/bull-search-web-thumb.webp',
-    },
-    {
-      src: '../assets/images/screenshots/webp/bull-search-web-mobile.webp',
-      caption: 'Bull Search Web - Mobile',
-      thumb:
-        '../assets/images/screenshots/webp/bull-search-web-mobile-thumb.webp',
-    },
-  ];
-
-  acceleratedGeneticsAlbum: IAlbum[] = [
-    {
-      src: '../assets/images/screenshots/webp/accelerated-genetics.webp',
-      caption: 'Accelerated Genetics - Desktop',
-      thumb:
-        '../assets/images/screenshots/webp/accelerated-genetics-thumb.webp',
-    },
-    {
-      src: '../assets/images/screenshots/webp/accelerated-genetics-mobile.webp',
-      caption: 'Accelerated Genetics - Mobile',
-      thumb:
-        '../assets/images/screenshots/webp/accelerated-genetics-mobile-thumb.webp',
-    },
-  ];
-
-  sireSearchAlbum: IAlbum[] = [
-    {
-      src: '../assets/images/screenshots/webp/ag-search.webp',
-      caption: 'Sire Search - Desktop',
-      thumb: '../assets/images/screenshots/webp/ag-search-thumb.webp',
-    },
-    {
-      src: '../assets/images/screenshots/webp/ag-search-mobile.webp',
-      caption: 'Sire Search - Mobile',
-      thumb: '../assets/images/screenshots/webp/ag-search-mobile-thumb.webp',
-    },
-  ];
-
-  shopSearchAlbum: IAlbum[] = [
-    {
-      src: '../assets/images/screenshots/webp/shop.webp',
-      caption: 'Shop - Desktop',
-      thumb: '../assets/images/screenshots/webp/shop-thumb.webp',
-    },
-  ];
-
-  dairySireSearchAlbum: IAlbum[] = [
-    {
-      src: '../assets/images/screenshots/webp/dairy-sire-selection.webp',
-      caption: 'Shop - Desktop',
-      thumb:
-        '../assets/images/screenshots/webp/dairy-sire-selection-thumb.webp',
-    },
-  ];
+  // Albums
+  bullSearchWebAlbum: IAlbum[] = BULL_SEARCH_WEB_ALBUM;
+  acceleratedGeneticsAlbum: IAlbum[] = ACCELERATED_GENETICS_ALBUM;
+  sireSearchAlbum: IAlbum[] = SIRE_SEARCH_ALBUM;
+  shopSearchAlbum: IAlbum[] = SHOP_SEARCH_ALBUM;
+  dairySireSearchAlbum: IAlbum[] = DAIRY_SIRE_SEARCH_ALBUM;
 
   constructor(
     private spyService: ScrollSpyService,
@@ -124,21 +56,8 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // Setup SpyService
-    this.spyService.spy({ thresholdBottom: 0 });
-    this.spyService.activeSpyTarget.subscribe(
-      (activeTargetName: string) => (this.sectionInView = activeTargetName)
-    );
-
-    // Set isPastOneHundredViewHeight
-    window.addEventListener('scroll', () => {
-      const oneHundredViewHeight = document.getElementById('landing')
-        .offsetHeight;
-      const currentPageYOffset = window.pageYOffset;
-
-      this.isPastOneHundredViewHeight =
-        currentPageYOffset >= oneHundredViewHeight;
-    });
+    this.setIsPastOneHundredViewHeight();
+    this.setupSpyService();
 
     // Update albums if browser does not support WEBP
     const element = document.querySelector('html');
@@ -178,15 +97,33 @@ export class AppComponent implements AfterViewInit {
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
 
+  setupSpyService(): void {
+    this.spyService.spy({ thresholdBottom: 0 });
+    this.spyService.activeSpyTarget.subscribe(
+      (activeTargetName: string) => (this.sectionInView = activeTargetName)
+    );
+  }
+
+  setIsPastOneHundredViewHeight(): void {
+    window.addEventListener('scroll', () => {
+      const oneHundredViewHeight = document.getElementById('landing')
+        .offsetHeight;
+      const currentPageYOffset = window.pageYOffset;
+
+      this.isPastOneHundredViewHeight =
+        currentPageYOffset >= oneHundredViewHeight;
+    });
+  }
+
   sortSkillsByRating(skills: Skill[]): Skill[] {
     return skills.sort((a, b) => b.rating - a.rating);
   }
 
   updateAlbumExtension(album: IAlbum[]): IAlbum[] {
     return album.map((a) => ({
-      src: this.replaceAll(a.src, this.WEBP, this.JPG),
-      caption: this.replaceAll(a.caption, this.WEBP, this.JPG),
-      thumb: this.replaceAll(a.thumb, this.WEBP, this.JPG),
+      src: this.replaceAll(a.src, WEBP, JPG),
+      caption: this.replaceAll(a.caption, WEBP, JPG),
+      thumb: this.replaceAll(a.thumb, WEBP, JPG),
     }));
   }
 }
