@@ -54,57 +54,60 @@ export class AppComponent implements AfterViewInit {
 
   bullSearchWebAlbum: IAlbum[] = [
     {
-      src: '../assets/images/screenshots/bull-search-web.webp',
+      src: '../assets/images/screenshots/webp/bull-search-web.webp',
       caption: 'Bull Search Web - Desktop',
-      thumb: '../assets/images/screenshots/bull-search-web-thumb.webp',
+      thumb: '../assets/images/screenshots/webp/bull-search-web-thumb.webp',
     },
     {
-      src: '../assets/images/screenshots/bull-search-web-mobile.webp',
+      src: '../assets/images/screenshots/webp/bull-search-web-mobile.webp',
       caption: 'Bull Search Web - Mobile',
-      thumb: '../assets/images/screenshots/bull-search-web-mobile-thumb.webp',
+      thumb:
+        '../assets/images/screenshots/webp/bull-search-web-mobile-thumb.webp',
     },
   ];
 
   acceleratedGeneticsAlbum: IAlbum[] = [
     {
-      src: '../assets/images/screenshots/accelerated-genetics.webp',
+      src: '../assets/images/screenshots/webp/accelerated-genetics.webp',
       caption: 'Accelerated Genetics - Desktop',
-      thumb: '../assets/images/screenshots/accelerated-genetics-thumb.webp',
+      thumb:
+        '../assets/images/screenshots/webp/accelerated-genetics-thumb.webp',
     },
     {
-      src: '../assets/images/screenshots/accelerated-genetics-mobile.webp',
+      src: '../assets/images/screenshots/webp/accelerated-genetics-mobile.webp',
       caption: 'Accelerated Genetics - Mobile',
       thumb:
-        '../assets/images/screenshots/accelerated-genetics-mobile-thumb.webp',
+        '../assets/images/screenshots/webp/accelerated-genetics-mobile-thumb.webp',
     },
   ];
 
   sireSearchAlbum: IAlbum[] = [
     {
-      src: '../assets/images/screenshots/ag-search.webp',
+      src: '../assets/images/screenshots/webp/ag-search.webp',
       caption: 'Sire Search - Desktop',
-      thumb: '../assets/images/screenshots/ag-search-thumb.webp',
+      thumb: '../assets/images/screenshots/webp/ag-search-thumb.webp',
     },
     {
-      src: '../assets/images/screenshots/ag-search-mobile.webp',
+      src: '../assets/images/screenshots/webp/ag-search-mobile.webp',
       caption: 'Sire Search - Mobile',
-      thumb: '../assets/images/screenshots/ag-search-mobile-thumb.webp',
+      thumb: '../assets/images/screenshots/webp/ag-search-mobile-thumb.webp',
     },
   ];
 
   shopSearchAlbum: IAlbum[] = [
     {
-      src: '../assets/images/screenshots/shop.webp',
+      src: '../assets/images/screenshots/webp/shop.webp',
       caption: 'Shop - Desktop',
-      thumb: '../assets/images/screenshots/shop-thumb.webp',
+      thumb: '../assets/images/screenshots/webp/shop-thumb.webp',
     },
   ];
 
   dairySireSearchAlbum: IAlbum[] = [
     {
-      src: '../assets/images/screenshots/dairy-sire-selection.webp',
+      src: '../assets/images/screenshots/webp/dairy-sire-selection.webp',
       caption: 'Shop - Desktop',
-      thumb: '../assets/images/screenshots/dairy-sire-selection-thumb.webp',
+      thumb:
+        '../assets/images/screenshots/webp/dairy-sire-selection-thumb.webp',
     },
   ];
 
