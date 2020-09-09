@@ -1,3 +1,5 @@
+@import "../styles/base/break-points";
+
 .landing {
   align-items: center;
   background-image: linear-gradient(
@@ -108,6 +110,7 @@
   }
 }
 
+// Keyframes
 @-webkit-keyframes bounce {
   0% {
     transform: translateY(0);
@@ -125,4 +128,29 @@
   }
 }
 
-@import "../styles/base/medias";
+// Media queries
+@media (max-width: $xs) {
+  .screenshot img {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: $lg) {
+  .screenshot img {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: $xxxl) {
+  .landing {
+    .down-wrapper {
+      height: 80px;
+      right: 5%;
+      width: 110px;
+    }
+  }
+
+  section.header {
+    padding-top: 50px;
+  }
+}
