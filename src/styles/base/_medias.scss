@@ -32,9 +32,9 @@
       top: 0;
       transition: padding 1.25s;
 
-      ul li:first-child {
-        border-top: none;
-      }
+      // ul li:first-child {
+      //   border-top: none;
+      // }
     }
 
     ul {
@@ -44,7 +44,7 @@
       li {
         align-items: center;
         background-color: var(--bg-nav);
-        border-top: 1px solid var(--border-menu);
+        // border-top: 1px solid var(--border-nav);
         color: var(--white);
         cursor: pointer;
         display: flex;
@@ -72,8 +72,8 @@
           transition: background-color 0.2s, color 0.2s;
         }
 
-        &.divide {
-          margin-top: 8px;
+        &.border-top {
+          border-top: 1px solid var(--border-nav);
         }
 
         a {
