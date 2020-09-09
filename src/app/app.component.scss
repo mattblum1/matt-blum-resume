@@ -36,6 +36,7 @@ nav.desktop {
   -webkit-background-size: cover;
   color: var(--dark-gray);
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
