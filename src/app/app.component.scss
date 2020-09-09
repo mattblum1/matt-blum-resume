@@ -21,28 +21,14 @@ nav.desktop {
 
 .landing {
   align-items: center;
-  background-image: url("../assets/images/landing/subtle.jpg");
-  -webkit-background-image: url("../assets/images/landing/subtle.jpg");
-  // background: linear-gradient(rgba(34, 179, 235, 0.1), rgba(85, 197, 240, 0.1)),
-  //   url("../assets/images/landing/subtle.jpg");
-  // url("../assets/images/landing/subtle.webp");
-  // background-attachment: fixed;
-  // -webkit-background-attachment: fixed;
-  // background-position: center;
-  // -webkit-background-position: center;
-  // background-repeat: no-repeat;
-  // -webkit-background-repeat: no-repeat;
+  background-image: url("../assets/images/landing/subtle.webp");
   background-size: cover;
-  -webkit-background-size: cover;
   color: var(--dark-gray);
   display: flex;
-  display: -webkit-flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
   margin: 0;
-  overflow: hidden;
-  -webkit-overflow: hidden;
   text-align: center;
 
   h1,

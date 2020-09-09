@@ -178,7 +178,6 @@ $accent-line-height: 76px;
   }
 }
 
-// .no-webp .landing {
-//   background: linear-gradient(rgba(34, 179, 235, 0.1), rgba(85, 197, 240, 0.1)),
-//     url("../assets/images/landing/subtle.jpg") !important;
-// }
+.no-webp .landing {
+  background-image: url("../assets/images/landing/subtle.jpg");
+}
