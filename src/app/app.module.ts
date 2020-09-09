@@ -20,6 +20,7 @@ import { ScrollSpyModule } from 'ng-spy';
 import { SkillsSectionComponent } from './components/skills-section/skills-section.component';
 import { UtilityService } from './services';
 import { ResumeComponent } from './components/resume/resume.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ResumeComponent } from './components/resume/resume.component';
     CareerSectionComponent,
     EducationSectionComponent,
     ResumeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -36,8 +36,14 @@
     >
       Education
     </li>
-    <li class="border-top" wmAnimate="fadeInRight" aos delay="1250ms">
-      <a href="mailto:matt.blum@live.com">Contact</a>
+    <li
+      (click)="utilityService.scrollToId('contact', SECTION_Y_OFFSET)"
+      [ngClass]="{ active: sectionInView === 'contact' }"
+      wmAnimate="fadeInRight"
+      aos
+      delay="1250ms"
+    >
+      Contact
     </li>
     <li
       class="border-top"

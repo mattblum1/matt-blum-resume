@@ -38,8 +38,12 @@
   >
     <span>Education</span>
   </button>
-  <button mat-menu-item>
-    <a href="mailto:matt.blum@live.com">Contact</a>
+  <button
+    mat-menu-item
+    (click)="utilityService.scrollToId('contact', SECTION_Y_OFFSET)"
+    [ngClass]="{ active: sectionInView === 'contact' }"
+  >
+    <span>Contact</span>
   </button>
   <button
     mat-menu-item
