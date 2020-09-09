@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CareerSectionComponent } from './components/career-section/career-section.component';
 import { EducationSectionComponent } from './components/education-section/education-section.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HeaderSectionComponent } from './components/header-section/header-section.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { LightboxModule } from 'ngx-lightbox';
@@ -13,14 +14,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavDesktopComponent } from './components/nav-desktop/nav-desktop.component';
 import { NavMobileComponent } from './components/nav-mobile/nav-mobile.component';
+import { NavToTopComponent } from './components/nav-to-top/nav-to-top.component';
 import { NgModule } from '@angular/core';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { ProjectsSectionComponent } from './components/projects-section/projects-section.component';
+import { ResumeComponent } from './components/resume/resume.component';
 import { ScrollSpyModule } from 'ng-spy';
 import { SkillsSectionComponent } from './components/skills-section/skills-section.component';
 import { UtilityService } from './services';
-import { ResumeComponent } from './components/resume/resume.component';
-import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { FooterComponent } from './components/footer/footer.component';
     EducationSectionComponent,
     ResumeComponent,
     FooterComponent,
+    NavToTopComponent,
   ],
   imports: [
     BrowserModule,

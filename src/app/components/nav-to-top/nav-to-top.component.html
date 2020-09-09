@@ -1,0 +1,14 @@
+<nav class="to-top" [ngClass]="{ fixed: isPastOneHundredViewHeight }">
+  <ul>
+    <li
+      (click)="utilityService.scrollToId('landing')"
+      wmAnimate="fadeInUp"
+      aos
+      delay="250ms"
+    >
+      <mat-icon aria-hidden="false" aria-label="Up Arrow"
+        >keyboard_arrow_up</mat-icon
+      >
+    </li>
+  </ul>
+</nav>

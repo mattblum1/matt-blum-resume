@@ -11,8 +11,8 @@ nav.desktop {
     padding: 0;
     width: 110px;
     position: absolute;
-    top: 100%;
     right: 5%;
+    top: 100%;
 
     &.fixed {
       padding-top: 50px;
@@ -53,10 +53,6 @@ nav.desktop {
           background-color: var(--primary);
           color: var(--white);
           transition: background-color 0.2s, color 0.2s;
-        }
-
-        &.border-top {
-          border-top: 1px solid var(--border-nav);
         }
 
         a {
