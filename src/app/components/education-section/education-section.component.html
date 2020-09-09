@@ -1,1 +1,53 @@
-<p>education-section works!</p>
+<section id="education" spyTarget="education">
+  <mat-card>
+    <app-header-section
+      [title]="'Education'"
+      [titleBlurb]="'Formal Training'"
+    ></app-header-section>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="content">
+          <div class="subsection">
+            <div class="subsection-header">
+              <span
+                ><h2>
+                  <a href="https://www.udacity.com" target="_blank">Udacity</a>
+                </h2></span
+              >
+              <span>June 2019 to October 2019</span>
+            </div>
+            <h4>Mobile Web Specialist, Nanodegree</h4>
+            <ul>
+              <li *ngFor="let course of mobileWebSpecialistCourses">
+                {{ course }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="content bg-alt">
+          <div class="subsection">
+            <div class="subsection-header">
+              <span
+                ><h2>
+                  <a href="https://www.blackhawk.edu" target="_blank"
+                    >Blackhawk Technical College</a
+                  >
+                </h2></span
+              >
+              <span>Graduated May 2014</span>
+            </div>
+            <div class="justify-content-space-between">
+              <h4>Associate of Applied Science - IT-Web Analyst/Programmer</h4>
+              <h4>GPA: 3.76/4.0</h4>
+            </div>
+            <ul>
+              <li *ngFor="let course of blackhawkCourses">{{ course }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</section>

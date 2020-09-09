@@ -1,6 +1,3 @@
-export { JPG, SECTION_Y_OFFSET, WEBP } from './misc';
-export { FRONT_END_SKILLS, MISC_SKILLS, LIBRARY_SKILLS } from './skills';
-export { BLACKHAWK_COURSES } from './courses';
 export {
   BULL_SEARCH_WEB_ALBUM,
   ACCELERATED_GENETICS_ALBUM,
@@ -8,3 +5,6 @@ export {
   SHOP_ALBUM as SHOP_SEARCH_ALBUM,
   DAIRY_SIRE_SEARCH_ALBUM,
 } from './albums';
+export { BLACKHAWK_COURSES, MOBILE_WEB_SPECIALIST_COURSES } from './courses';
+export { JPG, SECTION_Y_OFFSET, WEBP } from './misc';
+export { FRONT_END_SKILLS, MISC_SKILLS, LIBRARY_SKILLS } from './skills';

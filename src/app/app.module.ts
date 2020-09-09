@@ -19,6 +19,7 @@ import { ProjectsSectionComponent } from './components/projects-section/projects
 import { ScrollSpyModule } from 'ng-spy';
 import { SkillsSectionComponent } from './components/skills-section/skills-section.component';
 import { UtilityService } from './services';
+import { ResumeComponent } from './components/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { UtilityService } from './services';
     ProjectsSectionComponent,
     CareerSectionComponent,
     EducationSectionComponent,
+    ResumeComponent,
   ],
   imports: [
     BrowserModule,
