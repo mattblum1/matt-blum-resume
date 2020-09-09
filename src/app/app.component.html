@@ -55,14 +55,12 @@
 <section id="landing" class="landing" spyTarget="landing">
   <div class="landing-content">
     <h1 class="title" wmAnimate="fadeInUp">Matt Blum</h1>
-    <!-- .title -->
 
     <hr wmAnimate="fadeIn" delay="250ms" />
 
     <h3 class="description" wmAnimate="fadeInDown" delay="500ms">
       Front End Developer
     </h3>
-    <!-- .description -->
 
     <div class="cta">
       <div class="button-wrapper" wmAnimate="fadeInDown" delay="750ms">
@@ -70,20 +68,8 @@
           <mat-icon>email</mat-icon>Contact
         </a>
       </div>
-      <div class="button-wrapper" wmAnimate="fadeInDown" delay="1000ms">
-        <!-- <button
-          mat-raised-button
-          color="primary"
-          (click)="downloadPdfVersion()"
-        >
-          <mat-icon>cloud_download</mat-icon>PDF Version
-        </button> -->
-      </div>
-      <!-- .button-wrapper -->
     </div>
-    <!-- .cta -->
   </div>
-  <!-- .landing-content -->
 
   <div
     class="down-wrapper"
@@ -97,9 +83,7 @@
       >
     </div>
   </div>
-  <!-- .down-wrapper -->
 </section>
-<!-- .landing -->
 
 <nav class="desktop" [ngClass]="{ fixed: isPastOneHundredViewHeight }">
   <ul>
@@ -165,7 +149,6 @@
       <span><span class="top-accent">&nbsp;</span>Front end Developer</span>
     </h1>
   </section>
-  <!-- #header -->
 
   <section id="skills" spyTarget="skills">
     <mat-card>
@@ -178,7 +161,6 @@
           <div class="row">
             <div class="col"><h2>Front end</h2></div>
           </div>
-          <!-- .row -->
           <div class="row">
             <div
               class="col-sm-12 col-md-6 col-lg-4"
@@ -203,15 +185,12 @@
               </div>
             </div>
           </div>
-          <!-- .row -->
         </div>
-        <!-- .subsection -->
 
         <div class="subsection">
           <div class="row">
             <div class="col"><h2>Libraries</h2></div>
           </div>
-          <!-- .row -->
           <div class="row">
             <div
               class="col-sm-12 col-md-6 col-lg-4"
@@ -236,15 +215,12 @@
               </div>
             </div>
           </div>
-          <!-- .row -->
         </div>
-        <!-- .subsection -->
 
         <div class="subsection">
           <div class="row">
             <div class="col"><h2>Miscellaneous</h2></div>
           </div>
-          <!-- .row -->
           <div class="row">
             <div
               class="col-sm-12 col-md-6 col-lg-4"
@@ -269,14 +245,10 @@
               </div>
             </div>
           </div>
-          <!-- .row -->
         </div>
-        <!-- .subsection -->
       </div>
-      <!-- .content -->
     </mat-card>
   </section>
-  <!-- #skills -->
 
   <section id="projects" spyTarget="projects">
     <mat-card>
@@ -307,7 +279,6 @@
               created a one-to-one implementation of the UI, UX, and
               functionality using a mobile first strategy.
             </div>
-            <!-- .col -->
             <ng-template
               ngFor
               let-image
@@ -323,7 +294,6 @@
                   (click)="openAlbum(bullSearchWebAlbum, i)"
                 />
               </div>
-              <!-- .col -->
               <div
                 class="col-sm-12 col-md-4 col-lg-3 screenshot"
                 *ngIf="i === 1"
@@ -333,14 +303,10 @@
                   (click)="openAlbum(bullSearchWebAlbum, i)"
                 />
               </div>
-              <!-- .col -->
             </ng-template>
           </div>
-          <!-- .row -->
         </div>
-        <!-- .content -->
       </div>
-      <!-- .subsection -->
       <div class="subsection">
         <div class="content bg-alt">
           <h2>
@@ -353,7 +319,6 @@
               I was given the task of redesigning the UI, UX, architecture, and
               SEO. I also closed security holes and improved query performance.
             </div>
-            <!-- .col -->
             <ng-template
               ngFor
               let-image
@@ -369,7 +334,6 @@
                   (click)="openAlbum(acceleratedGeneticsAlbum, i)"
                 />
               </div>
-              <!-- .col -->
               <div
                 class="col-sm-12 col-md-4 col-lg-3 screenshot"
                 *ngIf="i === 1"
@@ -379,14 +343,10 @@
                   (click)="openAlbum(acceleratedGeneticsAlbum, i)"
                 />
               </div>
-              <!-- .col -->
             </ng-template>
           </div>
-          <!-- .row -->
         </div>
-        <!-- .content -->
       </div>
-      <!-- .subsection -->
       <div class="subsection">
         <div class="content">
           <h2>
@@ -397,7 +357,6 @@
               I designed and implemented its UI and UX. I also setup the state
               management using Redux.
             </div>
-            <!-- .col -->
             <ng-template
               ngFor
               let-image
@@ -413,7 +372,6 @@
                   (click)="openAlbum(sireSearchAlbum, i)"
                 />
               </div>
-              <!-- .col -->
               <div
                 class="col-sm-12 col-md-4 col-lg-3 screenshot"
                 *ngIf="i === 1"
@@ -423,14 +381,10 @@
                   (click)="openAlbum(sireSearchAlbum, i)"
                 />
               </div>
-              <!-- .col -->
             </ng-template>
           </div>
-          <!-- .row -->
         </div>
-        <!-- .content -->
       </div>
-      <!-- .subsection -->
       <div class="subsection">
         <div class="content bg-alt">
           <h2>
@@ -448,7 +402,6 @@
               >
               API.
             </div>
-            <!-- .col -->
             <ng-template
               ngFor
               let-image
@@ -461,15 +414,10 @@
                   (click)="openAlbum(shopSearchAlbum, i)"
                 />
               </div>
-              <!-- .col -->
             </ng-template>
-            <!-- .col -->
           </div>
-          <!-- .row -->
         </div>
-        <!-- .content -->
       </div>
-      <!-- .subsection -->
       <div class="subsection">
         <div class="content">
           <h2>
@@ -483,7 +431,6 @@
               developed and enhanced various internal features, limited to
               employees.
             </div>
-            <!-- .col -->
             <ng-template
               ngFor
               let-image
@@ -496,17 +443,12 @@
                   (click)="openAlbum(dairySireSearchAlbum, i)"
                 />
               </div>
-              <!-- .col -->
             </ng-template>
           </div>
-          <!-- .row -->
         </div>
-        <!-- .content -->
       </div>
-      <!-- .subsection -->
     </mat-card>
   </section>
-  <!-- #projects -->
 
   <section id="career" spyTarget="career">
     <mat-card>
@@ -527,7 +469,6 @@
             </span>
             <span>June 2017 to August 2020</span>
           </div>
-          <!-- subsection-header -->
           <div class="subsection-header">
             <h4>Front end Developer</h4>
             <h4>
@@ -537,7 +478,6 @@
               >
             </h4>
           </div>
-          <!-- subsection-header -->
           <p>
             Created and maintained various Angular applications. These
             applications assist geneticists in making breeding decisions, which
@@ -622,9 +562,7 @@
             </li>
           </ul>
         </div>
-        <!-- .subsection -->
       </div>
-      <!-- .content -->
       <div class="content bg-alt">
         <div class="subsection">
           <div class="subsection-header">
@@ -638,7 +576,6 @@
             </span>
             <span>January 2015 to May 2017</span>
           </div>
-          <!-- subsection-header -->
           <h4>Full-Stack Web Developer</h4>
           <ul>
             <li>
@@ -711,12 +648,9 @@
             </li>
           </ul>
         </div>
-        <!-- .subsection -->
       </div>
-      <!-- .content -->
     </mat-card>
   </section>
-  <!-- #career -->
 
   <section id="education" spyTarget="education">
     <mat-card>
@@ -738,7 +672,6 @@
                 >
                 <span>June 2019 to October 2019</span>
               </div>
-              <!-- .subsection-header -->
               <h4>Mobile Web Specialist, Nanodegree</h4>
               <ul>
                 <li>Dynamic & Offline Capable Web Apps</li>
@@ -746,11 +679,8 @@
                 <li>Web Accessibility</li>
               </ul>
             </div>
-            <!-- .subsection -->
           </div>
-          <!-- .content -->
         </div>
-        <!-- .col -->
         <div class="col-sm-12 col-md-6">
           <div class="content bg-alt">
             <div class="subsection">
@@ -764,7 +694,6 @@
                 >
                 <span>Graduated May 2014</span>
               </div>
-              <!-- .subsection-header -->
               <div class="justify-content-space-between">
                 <h4>
                   Associate of Applied Science - IT-Web Analyst/Programmer
@@ -775,15 +704,9 @@
                 <li *ngFor="let course of blackhawkCourses">{{ course }}</li>
               </ul>
             </div>
-            <!-- .subsection -->
           </div>
-          <!-- .content -->
         </div>
-        <!-- .col -->
       </div>
-      <!-- .row -->
     </mat-card>
   </section>
-  <!-- #education -->
 </div>
-<!-- .container -->
