@@ -22,6 +22,7 @@ nav.desktop {
 .landing {
   align-items: center;
   background-image: url("../assets/images/landing/subtle.webp");
+  -webkit-background-image: url("../assets/images/landing/subtle.webp");
   background-size: cover;
   color: var(--dark-gray);
   display: flex;
