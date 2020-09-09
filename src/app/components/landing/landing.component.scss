@@ -45,28 +45,6 @@
     margin: 20px 0;
   }
 
-  .cta {
-    .button-wrapper {
-      display: inline-block;
-      margin-right: 12px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    a,
-    button {
-      &.mat-raised-button {
-        mat-icon.mat-icon {
-          margin-right: 4px;
-          position: relative;
-          top: -1px;
-        }
-      }
-    }
-  }
-
   .down-wrapper {
     align-items: center;
     background-color: var(--primary);
