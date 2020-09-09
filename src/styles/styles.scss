@@ -179,11 +179,12 @@ $accent-line-height: 76px;
 }
 
 .no-webp .landing {
-  background-image: url("../assets/images/landing/subtle.jpg") !important;
+  background-image: url("../assets/images/landing/subtle.jpg");
 }
 
+// Safari 100vh fix
 @supports (-webkit-touch-callout: none) {
   .landing {
-    height: -webkit-fill-available !important;
+    height: -webkit-fill-available;
   }
 }
