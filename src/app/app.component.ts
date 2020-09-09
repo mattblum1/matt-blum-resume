@@ -17,15 +17,15 @@ export class AppComponent implements AfterViewInit {
   sectionInView: string = '';
 
   frontEndSkills: Skill[] = [
-    { label: 'Angular', rating: 5 },
-    { label: 'TypeScript', rating: 5 },
+    { label: 'Angular', rating: 4 },
+    { label: 'TypeScript', rating: 4 },
     { label: 'JavaScript', rating: 4 },
     { label: 'NgRx', rating: 4 },
     { label: 'Redux', rating: 4 },
-    { label: 'HTML5', rating: 5 },
-    { label: 'SCSS/CSS3', rating: 5 },
+    { label: 'HTML5', rating: 4 },
+    { label: 'SCSS/CSS3', rating: 4 },
     { label: 'SEO', rating: 4 },
-    { label: 'Responsive Design', rating: 5 },
+    { label: 'Responsive Design', rating: 4 },
     // { label: 'React', rating: 1 },
     // { label: 'PHP', rating: 1 },
   ];
@@ -38,7 +38,7 @@ export class AppComponent implements AfterViewInit {
   ];
 
   librarySkills: Skill[] = [
-    { label: 'Material', rating: 5 },
+    { label: 'Material', rating: 4 },
     { label: 'Bootstrap', rating: 4 },
     { label: 'PrimeNG', rating: 4 },
   ];
