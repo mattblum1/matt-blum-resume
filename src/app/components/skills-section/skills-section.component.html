@@ -1,0 +1,99 @@
+<section id="skills" spyTarget="skills">
+  <mat-card>
+    <app-header-section
+      [title]="'Skills'"
+      [titleBlurb]="'What I Have To Offer'"
+    ></app-header-section>
+    <div class="content">
+      <div class="subsection">
+        <div class="row">
+          <div class="col"><h2>Front end</h2></div>
+        </div>
+        <div class="row">
+          <div
+            class="col-sm-12 col-md-6 col-lg-4"
+            *ngFor="let skill of frontEndSkills"
+          >
+            <div class="row">
+              <div class="col-6 col-md-3">
+                {{ skill.label }}
+              </div>
+              <div class="col-6 col-md-9">
+                <mat-icon
+                  class="star"
+                  *ngFor="let item of [].constructor(skill.rating)"
+                  >star</mat-icon
+                >
+                <mat-icon
+                  class="star-empty"
+                  *ngFor="let item of [].constructor(5 - skill.rating)"
+                  >star</mat-icon
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="row">
+          <div class="col"><h2>Libraries</h2></div>
+        </div>
+        <div class="row">
+          <div
+            class="col-sm-12 col-md-6 col-lg-4"
+            *ngFor="let skill of librarySkills"
+          >
+            <div class="row">
+              <div class="col-6 col-md-3">
+                {{ skill.label }}
+              </div>
+              <div class="col-6 col-md-9">
+                <mat-icon
+                  class="star"
+                  *ngFor="let item of [].constructor(skill.rating)"
+                  >star</mat-icon
+                >
+                <mat-icon
+                  class="star-empty"
+                  *ngFor="let item of [].constructor(5 - skill.rating)"
+                  >star</mat-icon
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="row">
+          <div class="col"><h2>Miscellaneous</h2></div>
+        </div>
+        <div class="row">
+          <div
+            class="col-sm-12 col-md-6 col-lg-4"
+            *ngFor="let skill of miscSkills"
+          >
+            <div class="row">
+              <div class="col-6 col-md-3">
+                {{ skill.label }}
+              </div>
+              <div class="col-6 col-md-9">
+                <mat-icon
+                  class="star"
+                  *ngFor="let item of [].constructor(skill.rating)"
+                  >star</mat-icon
+                >
+                <mat-icon
+                  class="star-empty"
+                  *ngFor="let item of [].constructor(5 - skill.rating)"
+                  >star</mat-icon
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</section>

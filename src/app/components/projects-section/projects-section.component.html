@@ -1,0 +1,180 @@
+<section id="projects" spyTarget="projects">
+  <mat-card>
+    <app-header-section
+      [title]="'Projects'"
+      [titleBlurb]="'Web Apps I\'ve worked on'"
+    ></app-header-section>
+    <div class="subsection">
+      <div class="content">
+        <h2>
+          <a
+            href="https://bull-search-web-dev.azurewebsites.net"
+            target="_blank"
+            >Bull Search Web</a
+          >
+        </h2>
+        <div class="row">
+          <div class="col-md-12 col-lg-4">
+            Bull Search Web is an ongoing project and as such, is in a
+            development environment. It's an
+            <a href="https://angular.io" target="_blank">Angular</a> 9
+            application using
+            <a href="https://ngrx.io" target="_blank">NgRx</a> for state
+            management. The UI and UX was designed by
+            <a href="https://centricconsulting.com/" target="_blank"
+              >Centric Consulting</a
+            >, who I had the pleasure of collaborating with. Ultimately, I
+            created a one-to-one implementation of the UI, UX, and functionality
+            using a mobile first strategy.
+          </div>
+          <ng-template
+            ngFor
+            let-image
+            [ngForOf]="bullSearchWebAlbum"
+            let-i="index"
+          >
+            <div class="col-sm-12 col-md-8 col-lg-5 screenshot" *ngIf="i === 0">
+              <img
+                [src]="image.thumb"
+                (click)="openAlbum(bullSearchWebAlbum, i)"
+              />
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 screenshot" *ngIf="i === 1">
+              <img
+                [src]="image.thumb"
+                (click)="openAlbum(bullSearchWebAlbum, i)"
+              />
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="subsection">
+      <div class="content bg-alt">
+        <h2>
+          <a href="http://www.accelgen.com" target="_blank"
+            >Accelerated Genetics</a
+          >
+        </h2>
+        <div class="row">
+          <div class="col-md-12 col-lg-4">
+            I was given the task of redesigning the UI, UX, architecture, and
+            SEO. I also closed security holes and improved query performance.
+          </div>
+          <ng-template
+            ngFor
+            let-image
+            [ngForOf]="acceleratedGeneticsAlbum"
+            let-i="index"
+          >
+            <div class="col-sm-12 col-md-8 col-lg-5 screenshot" *ngIf="i === 0">
+              <img
+                [src]="image.thumb"
+                (click)="openAlbum(acceleratedGeneticsAlbum, i)"
+              />
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 screenshot" *ngIf="i === 1">
+              <img
+                [src]="image.thumb"
+                (click)="openAlbum(acceleratedGeneticsAlbum, i)"
+              />
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="subsection">
+      <div class="content">
+        <h2>
+          <a href="http://search.accelgen.com" target="_blank">Sire Search</a>
+        </h2>
+        <div class="row">
+          <div class="col-md-12 col-lg-4">
+            I designed and implemented its UI and UX. I also setup the state
+            management using Redux.
+          </div>
+          <ng-template
+            ngFor
+            let-image
+            [ngForOf]="sireSearchAlbum"
+            let-i="index"
+          >
+            <div class="col-sm-12 col-md-8 col-lg-5 screenshot" *ngIf="i === 0">
+              <img
+                [src]="image.thumb"
+                (click)="openAlbum(sireSearchAlbum, i)"
+              />
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 screenshot" *ngIf="i === 1">
+              <img
+                [src]="image.thumb"
+                (click)="openAlbum(sireSearchAlbum, i)"
+              />
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="subsection">
+      <div class="content bg-alt">
+        <h2>
+          <a href="https://shop.accelgen.com" target="_blank">Shop</a>
+        </h2>
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            I adapted the UI from
+            <a href="https://selectsiresbeef.com" target="_blank"
+              >Select Sires Beef</a
+            >. It's written in ASP.NET C# and uses JavaScript to communicate
+            with the
+            <a href="https://www.windriverfinancial.com" target="_blank"
+              >WindRiver</a
+            >
+            API.
+          </div>
+          <ng-template
+            ngFor
+            let-image
+            [ngForOf]="shopSearchAlbum"
+            let-i="index"
+          >
+            <div class="col-md-12 col-lg-6 screenshot" *ngIf="i === 0">
+              <img
+                [src]="image.thumb"
+                (click)="openAlbum(shopSearchAlbum, i)"
+              />
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="subsection">
+      <div class="content">
+        <h2>
+          <a href="https://dss.selectsires.com/" target="_blank"
+            >Dairy Sire Search</a
+          >
+        </h2>
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            I created a one-to-one implementation of the UI and UX. I developed
+            and enhanced various internal features, limited to employees.
+          </div>
+          <ng-template
+            ngFor
+            let-image
+            [ngForOf]="dairySireSearchAlbum"
+            let-i="index"
+          >
+            <div class="col-md-12 col-lg-6 screenshot" *ngIf="i === 0">
+              <img
+                [src]="image.thumb"
+                (click)="openAlbum(dairySireSearchAlbum, i)"
+              />
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</section>

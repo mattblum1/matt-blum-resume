@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-section-header',
-  templateUrl: './section-header.component.html',
-  styleUrls: ['./section-header.component.scss'],
+  selector: 'app-header-section',
+  templateUrl: './header-section.component.html',
+  styleUrls: ['./header-section.component.scss'],
 })
-export class SectionHeaderComponent {
+export class HeaderSectionComponent {
   @Input() title: string = 'Title';
   @Input() titleBlurb: string = 'Title Blurb';
 

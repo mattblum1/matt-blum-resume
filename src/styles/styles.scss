@@ -67,7 +67,8 @@ mat-card {
   }
 
   .header {
-    margin-bottom: 20px;
+    padding-bottom: 17px;
+    padding-top: 16px;
     text-transform: uppercase;
 
     .title {
@@ -98,8 +99,8 @@ section {
     align-content: center;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 95px;
-    padding-top: 98px;
+    padding-bottom: 17px;
+    padding-top: 16px;
   }
 
   .subsection {
@@ -128,48 +129,9 @@ section {
   }
 }
 
-$accent-line-height: 76px;
 .mat-typography {
   font-size: 15px;
   line-height: 24px;
-
-  .side-accent {
-    color: var(--white);
-    font-size: 36px;
-    line-height: 1;
-    height: $accent-line-height;
-    text-transform: uppercase;
-
-    a,
-    span {
-      background-color: var(--bg-header);
-      color: var(--white);
-      transition: background-color 0.2s;
-    }
-
-    a {
-      border-left: 10px solid var(--primary);
-      float: left;
-      padding: 20px;
-      text-decoration: none;
-    }
-
-    span {
-      float: right;
-      position: relative;
-      padding: 20px;
-
-      .top-accent {
-        background-color: transparent;
-        border-top: 10px var(--primary) solid;
-        height: calc(100% - 10px);
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: $accent-line-height;
-      }
-    }
-  }
 }
 
 .no-webp .landing {
@@ -178,6 +140,13 @@ $accent-line-height: 76px;
       rgba(0, 150, 199, 0.5)
     ),
     url("../assets/images/landing/subtle-black.jpg") !important;
+}
+
+@media (min-width: $xxxl) {
+  section.header {
+    padding-bottom: 95px;
+    padding-top: 50px;
+  }
 }
 
 // Safari 100vh fix
