@@ -4,6 +4,7 @@ import {
   DAIRY_SIRE_SEARCH_ALBUM,
   JPG,
   SHOP_SEARCH_ALBUM,
+  SIRE_SEARCH_ALBUM,
   WEBP,
 } from 'src/consts';
 import { IAlbum, Lightbox } from 'ngx-lightbox';
@@ -18,7 +19,7 @@ import { Component } from '@angular/core';
 export class ProjectsSectionComponent {
   bullSearchWebAlbum: IAlbum[] = BULL_SEARCH_WEB_ALBUM;
   acceleratedGeneticsAlbum: IAlbum[] = ACCELERATED_GENETICS_ALBUM;
-  sireSearchAlbum: IAlbum[] = SHOP_SEARCH_ALBUM;
+  sireSearchAlbum: IAlbum[] = SIRE_SEARCH_ALBUM;
   shopSearchAlbum: IAlbum[] = SHOP_SEARCH_ALBUM;
   dairySireSearchAlbum: IAlbum[] = DAIRY_SIRE_SEARCH_ALBUM;
 
