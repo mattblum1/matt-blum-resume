@@ -67,10 +67,6 @@ mat-card {
   }
 
   .header {
-    padding-bottom: 17px;
-    padding-top: 16px;
-    text-transform: uppercase;
-
     .title {
       background-color: var(--primary);
       color: var(--white);
@@ -99,8 +95,9 @@ section {
     align-content: center;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 17px;
+    padding-bottom: 37px;
     padding-top: 16px;
+    text-transform: uppercase;
   }
 
   .subsection {
