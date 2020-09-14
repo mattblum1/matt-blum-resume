@@ -10,6 +10,7 @@ export const FRONT_END_SKILLS: Skill[] = [
   { label: 'SCSS/CSS3', rating: 4 },
   { label: 'SEO', rating: 4 },
   { label: 'Responsive Design', rating: 4 },
+  { label: 'React', rating: 2 },
 ];
 
 export const MISC_SKILLS: Skill[] = [
